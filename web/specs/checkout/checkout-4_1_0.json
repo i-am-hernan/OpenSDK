@@ -1,0 +1,206 @@
+{
+  "environment": {
+    "name": "environment",
+    "type": "enum",
+    "strictType": "'test' | 'live' | 'live-us' | 'live-au' | string",
+    "required": false,
+    "description": "The environment to which the request should be sent.",
+    "values": [
+      "test",
+      "live",
+      "live-us",
+      "live-au"
+    ]
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "locale": {
+    "name": "locale",
+    "type": "string",
+    "strictType": "Locales | string",
+    "required": false,
+    "description": "The shopper's locale. For example, `en-US`."
+  },
+  "translations": {
+    "name": "translations",
+    "type": "object",
+    "strictType": "CustomTranslations",
+    "required": false,
+    "description": "The translations object.",
+    "additionalProperties": {}
+  },
+  "paymentMethodsResponse": {
+    "name": "paymentMethodsResponse",
+    "type": "object",
+    "strictType": "PaymentMethodsResponseObject",
+    "required": false,
+    "description": "The response from the /paymentMethods endpoint.",
+    "additionalProperties": {
+      "paymentMethods": {
+        "name": "paymentMethods",
+        "type": "array",
+        "strictType": "PaymentMethod[]",
+        "required": true,
+        "description": ""
+      },
+      "storedPaymentMethods": {
+        "name": "storedPaymentMethods",
+        "type": "array",
+        "strictType": "StoredPaymentMethod[]",
+        "required": false,
+        "description": ""
+      },
+      "groups": {
+        "name": "groups",
+        "type": "string",
+        "strictType": "any",
+        "required": false,
+        "description": ""
+      },
+      "oneClickPaymentMethods": {
+        "name": "oneClickPaymentMethods",
+        "type": "function",
+        "strictType": "any",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "amount": {
+    "name": "amount",
+    "type": "object",
+    "strictType": "PaymentAmount",
+    "required": false,
+    "description": "The transaction amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's country code."
+  },
+  "paymentMethodsConfiguration": {
+    "name": "paymentMethodsConfiguration",
+    "type": "object",
+    "strictType": "PaymentMethodsConfiguration",
+    "required": false,
+    "description": "The configuration object for the payment methods."
+  },
+  "allowPaymentMethods": {
+    "name": "allowPaymentMethods",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": "The payment methods to be shown."
+  },
+  "removePaymentMethods": {
+    "name": "removePaymentMethods",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": "The payment methods to be hidden."
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The URL to the Adyen Checkout API."
+  },
+  "analytics": {
+    "name": "analytics",
+    "type": "object",
+    "strictType": "AnalyticsOptions",
+    "required": false,
+    "description": "The configuration object for the analytics module.",
+    "additionalProperties": {
+      "enabled": {
+        "name": "enabled",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "telemetry": {
+        "name": "telemetry",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "conversion": {
+        "name": "conversion",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "conversionId": {
+        "name": "conversionId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "risk": {
+    "name": "risk",
+    "type": "object",
+    "strictType": "RiskModuleOptions",
+    "required": false,
+    "description": "The configuration object for the risk module.",
+    "additionalProperties": {
+      "enabled": {
+        "name": "enabled",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": true,
+        "description": ""
+      },
+      "onComplete": {
+        "name": "onComplete",
+        "type": "function",
+        "strictType": "(data) => void",
+        "required": true,
+        "description": ""
+      },
+      "onError": {
+        "name": "onError",
+        "type": "function",
+        "strictType": "(error) => void",
+        "required": true,
+        "description": "The function to call when an error occurs."
+      },
+      "node": {
+        "name": "node",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  }
+}

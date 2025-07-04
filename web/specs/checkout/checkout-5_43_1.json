@@ -1,0 +1,551 @@
+{
+  "session": {
+    "name": "session",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": "The session object."
+  },
+  "environment": {
+    "name": "environment",
+    "type": "enum",
+    "strictType": "'test' | 'live' | 'live-us' | 'live-au' | 'live-apse' | 'live-in' | string",
+    "required": false,
+    "description": "The environment to which the request should be sent.",
+    "values": [
+      "test",
+      "live",
+      "live-us",
+      "live-au",
+      "live-apse",
+      "live-in"
+    ]
+  },
+  "showPayButton": {
+    "name": "showPayButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": "Whether to show the pay button."
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "locale": {
+    "name": "locale",
+    "type": "string",
+    "strictType": "Locales | string",
+    "required": false,
+    "description": "The shopper's locale. For example, `en-US`."
+  },
+  "translations": {
+    "name": "translations",
+    "type": "object",
+    "strictType": "CustomTranslations",
+    "required": false,
+    "description": "The translations object.",
+    "additionalProperties": {}
+  },
+  "paymentMethodsResponse": {
+    "name": "paymentMethodsResponse",
+    "type": "object",
+    "strictType": "PaymentMethodsResponse",
+    "required": false,
+    "description": "The response from the /paymentMethods endpoint.",
+    "additionalProperties": {
+      "paymentMethods": {
+        "name": "paymentMethods",
+        "type": "array",
+        "strictType": "PaymentMethod[]",
+        "required": false,
+        "description": ""
+      },
+      "storedPaymentMethods": {
+        "name": "storedPaymentMethods",
+        "type": "array",
+        "strictType": "StoredPaymentMethod[]",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "amount": {
+    "name": "amount",
+    "type": "object",
+    "strictType": "PaymentAmountExtended",
+    "required": false,
+    "description": "The transaction amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "currencyDisplay": {
+        "name": "currencyDisplay",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "secondaryAmount": {
+    "name": "secondaryAmount",
+    "type": "object",
+    "strictType": "PaymentAmountExtended",
+    "required": false,
+    "description": "The secondary amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "currencyDisplay": {
+        "name": "currencyDisplay",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's country code."
+  },
+  "paymentMethodsConfiguration": {
+    "name": "paymentMethodsConfiguration",
+    "type": "object",
+    "strictType": "PaymentMethodsConfiguration",
+    "required": false,
+    "description": "The configuration object for the payment methods."
+  },
+  "allowPaymentMethods": {
+    "name": "allowPaymentMethods",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": "The payment methods to be shown."
+  },
+  "removePaymentMethods": {
+    "name": "removePaymentMethods",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": "The payment methods to be hidden."
+  },
+  "srConfig": {
+    "name": "srConfig",
+    "type": "object",
+    "strictType": "SRPanelProps",
+    "required": false,
+    "description": "The configuration object for the secure redirect module.",
+    "additionalProperties": {
+      "_parentInstance": {
+        "name": "_parentInstance",
+        "type": "string",
+        "strictType": "Core",
+        "required": false,
+        "description": ""
+      },
+      "order": {
+        "name": "order",
+        "type": "object",
+        "strictType": "Order",
+        "required": false,
+        "description": "The order object.",
+        "additionalProperties": {
+          "orderData": {
+            "name": "orderData",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": ""
+          },
+          "pspReference": {
+            "name": "pspReference",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": ""
+          },
+          "remainingAmount": {
+            "name": "remainingAmount",
+            "type": "object",
+            "strictType": "PaymentAmount",
+            "required": false,
+            "description": "",
+            "additionalProperties": {
+              "value": {
+                "name": "value",
+                "type": "number",
+                "strictType": "number",
+                "required": true,
+                "description": ""
+              },
+              "currency": {
+                "name": "currency",
+                "type": "string",
+                "strictType": "string",
+                "required": true,
+                "description": ""
+              }
+            }
+          }
+        }
+      },
+      "modules": {
+        "name": "modules",
+        "type": "object",
+        "strictType": "object",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "srPanel": {
+            "name": "srPanel",
+            "type": "object",
+            "strictType": "SRPanel",
+            "required": false,
+            "description": ""
+          },
+          "analytics": {
+            "name": "analytics",
+            "type": "object",
+            "strictType": "Analytics",
+            "required": false,
+            "description": "The configuration object for the analytics module."
+          },
+          "resources": {
+            "name": "resources",
+            "type": "object",
+            "strictType": "Resources",
+            "required": false,
+            "description": ""
+          },
+          "risk": {
+            "name": "risk",
+            "type": "object",
+            "strictType": "RiskElement",
+            "required": false,
+            "description": "The configuration object for the risk module."
+          }
+        }
+      },
+      "isDropin": {
+        "name": "isDropin",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "enabled": {
+        "name": "enabled",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "node": {
+        "name": "node",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "showPanel": {
+        "name": "showPanel",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "moveFocus": {
+        "name": "moveFocus",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "id": {
+        "name": "id",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": "The unique identifier for the payment session."
+      }
+    }
+  },
+  "cdnContext": {
+    "name": "cdnContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "resourceEnvironment": {
+    "name": "resourceEnvironment",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "analytics": {
+    "name": "analytics",
+    "type": "object",
+    "strictType": "AnalyticsOptions",
+    "required": false,
+    "description": "The configuration object for the analytics module.",
+    "additionalProperties": {
+      "enabled": {
+        "name": "enabled",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "telemetry": {
+        "name": "telemetry",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "checkoutAttemptId": {
+        "name": "checkoutAttemptId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "payload": {
+        "name": "payload",
+        "type": "string",
+        "strictType": "any",
+        "required": false,
+        "description": ""
+      },
+      "experiments": {
+        "name": "experiments",
+        "type": "array",
+        "strictType": "Experiment[]",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "risk": {
+    "name": "risk",
+    "type": "object",
+    "strictType": "RiskModuleOptions",
+    "required": false,
+    "description": "The configuration object for the risk module.",
+    "additionalProperties": {
+      "enabled": {
+        "name": "enabled",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": true,
+        "description": ""
+      },
+      "onComplete": {
+        "name": "onComplete",
+        "type": "function",
+        "strictType": "(data) => void",
+        "required": true,
+        "description": ""
+      },
+      "onError": {
+        "name": "onError",
+        "type": "function",
+        "strictType": "(error) => void",
+        "required": true,
+        "description": "The function to call when an error occurs."
+      },
+      "node": {
+        "name": "node",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "order": {
+    "name": "order",
+    "type": "object",
+    "strictType": "Order",
+    "required": false,
+    "description": "The order object.",
+    "additionalProperties": {
+      "orderData": {
+        "name": "orderData",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "pspReference": {
+        "name": "pspReference",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "remainingAmount": {
+        "name": "remainingAmount",
+        "type": "object",
+        "strictType": "PaymentAmount",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "value": {
+            "name": "value",
+            "type": "number",
+            "strictType": "number",
+            "required": true,
+            "description": ""
+          },
+          "currency": {
+            "name": "currency",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "setStatusAutomatically": {
+    "name": "setStatusAutomatically",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "beforeRedirect": {
+    "name": "beforeRedirect",
+    "type": "function",
+    "strictType": "Promise<void>",
+    "required": false,
+    "description": "The function to call before redirecting the shopper."
+  },
+  "beforeSubmit": {
+    "name": "beforeSubmit",
+    "type": "function",
+    "strictType": "Promise<void>",
+    "required": false,
+    "description": "The function to call before submitting the payment details."
+  },
+  "onPaymentCompleted": {
+    "name": "onPaymentCompleted",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the payment is completed."
+  },
+  "onSubmit": {
+    "name": "onSubmit",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the payment details are submitted."
+  },
+  "onAdditionalDetails": {
+    "name": "onAdditionalDetails",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when additional details are required."
+  },
+  "onActionHandled": {
+    "name": "onActionHandled",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the action is handled."
+  },
+  "onChange": {
+    "name": "onChange",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the state changes."
+  },
+  "onError": {
+    "name": "onError",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when an error occurs."
+  },
+  "onBalanceCheck": {
+    "name": "onBalanceCheck",
+    "type": "function",
+    "strictType": "Promise<void>",
+    "required": false,
+    "description": "The function to call when the balance is checked."
+  },
+  "onOrderRequest": {
+    "name": "onOrderRequest",
+    "type": "function",
+    "strictType": "Promise<void>",
+    "required": false,
+    "description": "The function to call when the order is requested."
+  },
+  "onOrderCancel": {
+    "name": "onOrderCancel",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the order is canceled."
+  },
+  "onOrderCreated": {
+    "name": "onOrderCreated",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": ""
+  },
+  "onCancel": {
+    "name": "onCancel",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": ""
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The URL to the Adyen Checkout API."
+  }
+}

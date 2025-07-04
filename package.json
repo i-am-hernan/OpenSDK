@@ -1,0 +1,25 @@
+{
+  "name": "opensdk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ts-node web/src/scripts/updateAllSpecs.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-am-hernan/OpenSDK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-am-hernan/OpenSDK/issues"
+  },
+  "homepage": "https://github.com/i-am-hernan/OpenSDK#readme",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
