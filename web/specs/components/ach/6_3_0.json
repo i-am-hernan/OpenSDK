@@ -1,0 +1,67 @@
+{
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "holderNameRequired": {
+    "name": "holderNameRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": true,
+    "description": ""
+  },
+  "bankAccountNumber": {
+    "name": "bankAccountNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "Placeholders",
+    "required": false,
+    "description": ""
+  },
+  "data": {
+    "name": "data",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "holderName": {
+        "name": "holderName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "billingAddress": {
+        "name": "billingAddress",
+        "type": "object",
+        "strictType": "Partial",
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}

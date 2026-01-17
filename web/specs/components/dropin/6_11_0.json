@@ -1,0 +1,155 @@
+{
+  "paymentMethodsConfiguration": {
+    "name": "paymentMethodsConfiguration",
+    "type": "object",
+    "strictType": "PaymentMethodsConfiguration",
+    "required": false,
+    "description": "The configuration object for the payment methods."
+  },
+  "paymentMethodComponents": {
+    "name": "paymentMethodComponents",
+    "type": "array",
+    "strictType": "NewableComponent[]",
+    "required": false,
+    "description": ""
+  },
+  "order": {
+    "name": "order",
+    "type": "object",
+    "strictType": "Order",
+    "required": false,
+    "description": "The order object.",
+    "additionalProperties": {
+      "orderData": {
+        "name": "orderData",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "pspReference": {
+        "name": "pspReference",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "remainingAmount": {
+        "name": "remainingAmount",
+        "type": "object",
+        "strictType": "PaymentAmount",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "value": {
+            "name": "value",
+            "type": "number",
+            "strictType": "number",
+            "required": true,
+            "description": ""
+          },
+          "currency": {
+            "name": "currency",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "showStoredPaymentMethods": {
+    "name": "showStoredPaymentMethods",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "disableFinalAnimation": {
+    "name": "disableFinalAnimation",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showPaymentMethods": {
+    "name": "showPaymentMethods",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "instantPaymentTypes": {
+    "name": "instantPaymentTypes",
+    "type": "array",
+    "strictType": "InstantPaymentTypes[]",
+    "required": false,
+    "description": ""
+  },
+  "openPaymentMethod": {
+    "name": "openPaymentMethod",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "type": {
+        "name": "type",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "openFirstStoredPaymentMethod": {
+    "name": "openFirstStoredPaymentMethod",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "openFirstPaymentMethod": {
+    "name": "openFirstPaymentMethod",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "onReady": {
+    "name": "onReady",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the component is ready."
+  },
+  "onSelect": {
+    "name": "onSelect",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": ""
+  },
+  "showRemovePaymentMethodButton": {
+    "name": "showRemovePaymentMethodButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showRadioButton": {
+    "name": "showRadioButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "onDisableStoredPaymentMethod": {
+    "name": "onDisableStoredPaymentMethod",
+    "type": "function",
+    "strictType": "(storedPaymentMethod, resolve, reject) => void",
+    "required": false,
+    "description": ""
+  }
+}

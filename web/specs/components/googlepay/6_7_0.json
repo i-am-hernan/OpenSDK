@@ -1,0 +1,259 @@
+{
+  "type": {
+    "name": "type",
+    "type": "enum",
+    "strictType": "'googlepay' | 'paywithgoogle'",
+    "required": false,
+    "description": "",
+    "values": [
+      "googlepay",
+      "paywithgoogle"
+    ]
+  },
+  "expressPage": {
+    "name": "expressPage",
+    "type": "enum",
+    "strictType": "'cart' | 'minicart' | 'pdp' | 'checkout'",
+    "required": false,
+    "description": "",
+    "values": [
+      "cart",
+      "minicart",
+      "pdp",
+      "checkout"
+    ]
+  },
+  "isExpress": {
+    "name": "isExpress",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "existingPaymentMethodRequired": {
+    "name": "existingPaymentMethodRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "totalPriceStatus": {
+    "name": "totalPriceStatus",
+    "type": "object",
+    "strictType": "google.payments.api.TotalPriceStatus",
+    "required": false,
+    "description": ""
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's country code."
+  },
+  "allowedAuthMethods": {
+    "name": "allowedAuthMethods",
+    "type": "array",
+    "strictType": "google.payments.api.CardAuthMethod[]",
+    "required": false,
+    "description": ""
+  },
+  "allowedCardNetworks": {
+    "name": "allowedCardNetworks",
+    "type": "array",
+    "strictType": "google.payments.api.CardNetwork[]",
+    "required": false,
+    "description": ""
+  },
+  "assuranceDetailsRequired": {
+    "name": "assuranceDetailsRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "allowCreditCards": {
+    "name": "allowCreditCards",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "allowPrepaidCards": {
+    "name": "allowPrepaidCards",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "billingAddressRequired": {
+    "name": "billingAddressRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "billingAddressParameters": {
+    "name": "billingAddressParameters",
+    "type": "object",
+    "strictType": "google.payments.api.BillingAddressParameters",
+    "required": false,
+    "description": ""
+  },
+  "emailRequired": {
+    "name": "emailRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "shippingAddressRequired": {
+    "name": "shippingAddressRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "shippingAddressParameters": {
+    "name": "shippingAddressParameters",
+    "type": "object",
+    "strictType": "google.payments.api.ShippingAddressParameters",
+    "required": false,
+    "description": ""
+  },
+  "shippingOptionRequired": {
+    "name": "shippingOptionRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "shippingOptionParameters": {
+    "name": "shippingOptionParameters",
+    "type": "object",
+    "strictType": "google.payments.api.ShippingOptionParameters",
+    "required": false,
+    "description": ""
+  },
+  "callbackIntents": {
+    "name": "callbackIntents",
+    "type": "array",
+    "strictType": "google.payments.api.CallbackIntent[]",
+    "required": false,
+    "description": ""
+  },
+  "paymentDataCallbacks": {
+    "name": "paymentDataCallbacks",
+    "type": "object",
+    "strictType": "Pick",
+    "required": false,
+    "description": ""
+  },
+  "transactionInfo": {
+    "name": "transactionInfo",
+    "type": "object",
+    "strictType": "Partial",
+    "required": false,
+    "description": ""
+  },
+  "buttonColor": {
+    "name": "buttonColor",
+    "type": "object",
+    "strictType": "google.payments.api.ButtonColor",
+    "required": false,
+    "description": ""
+  },
+  "buttonType": {
+    "name": "buttonType",
+    "type": "object",
+    "strictType": "google.payments.api.ButtonType",
+    "required": false,
+    "description": ""
+  },
+  "buttonSizeMode": {
+    "name": "buttonSizeMode",
+    "type": "object",
+    "strictType": "google.payments.api.ButtonSizeMode",
+    "required": false,
+    "description": ""
+  },
+  "buttonRootNode": {
+    "name": "buttonRootNode",
+    "type": "string",
+    "strictType": "HTMLDocument | ShadowRoot",
+    "required": false,
+    "description": ""
+  },
+  "buttonLocale": {
+    "name": "buttonLocale",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "buttonRadius": {
+    "name": "buttonRadius",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "(resolve, reject) => void",
+    "required": false,
+    "description": ""
+  },
+  "onAuthorized": {
+    "name": "onAuthorized",
+    "type": "function",
+    "strictType": "(\n        data: {\n            authorizedEvent: google.payments.api.PaymentData;\n            billingAddress?: Partial<AddressData>;\n            deliveryAddress?: Partial<AddressData>;\n        },\n        actions: { resolve: () => void; reject: (error?: google.payments.api.PaymentDataError | string) => void }\n    ) => void",
+    "required": false,
+    "description": ""
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "gatewayMerchantId": {
+        "name": "gatewayMerchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantName": {
+        "name": "merchantName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantOrigin": {
+        "name": "merchantOrigin",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "authJwt": {
+        "name": "authJwt",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  }
+}

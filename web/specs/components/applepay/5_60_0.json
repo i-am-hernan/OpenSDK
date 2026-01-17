@@ -1,0 +1,440 @@
+{
+  "version": {
+    "name": "version",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": true,
+    "description": "The shopper's country code."
+  },
+  "totalPriceLabel": {
+    "name": "totalPriceLabel",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "totalPriceStatus": {
+    "name": "totalPriceStatus",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayLineItemType",
+    "required": false,
+    "description": ""
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "merchantName": {
+        "name": "merchantName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "initiative": {
+    "name": "initiative",
+    "type": "object",
+    "strictType": "Initiative",
+    "required": false,
+    "description": ""
+  },
+  "lineItems": {
+    "name": "lineItems",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayLineItem[]",
+    "required": false,
+    "description": ""
+  },
+  "merchantCapabilities": {
+    "name": "merchantCapabilities",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayMerchantCapability[]",
+    "required": false,
+    "description": ""
+  },
+  "shippingMethods": {
+    "name": "shippingMethods",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayShippingMethod[]",
+    "required": false,
+    "description": ""
+  },
+  "shippingType": {
+    "name": "shippingType",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayShippingType",
+    "required": false,
+    "description": ""
+  },
+  "supportedCountries": {
+    "name": "supportedCountries",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "supportedNetworks": {
+    "name": "supportedNetworks",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "recurringPaymentRequest": {
+    "name": "recurringPaymentRequest",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayRecurringPaymentRequest",
+    "required": false,
+    "description": ""
+  },
+  "requiredBillingContactFields": {
+    "name": "requiredBillingContactFields",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayContactField[]",
+    "required": false,
+    "description": ""
+  },
+  "requiredShippingContactFields": {
+    "name": "requiredShippingContactFields",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayContactField[]",
+    "required": false,
+    "description": ""
+  },
+  "billingContact": {
+    "name": "billingContact",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayPaymentContact",
+    "required": false,
+    "description": ""
+  },
+  "shippingContact": {
+    "name": "shippingContact",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayPaymentContact",
+    "required": false,
+    "description": ""
+  },
+  "applicationData": {
+    "name": "applicationData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "(resolve, reject) => void",
+    "required": false,
+    "description": ""
+  },
+  "onAuthorized": {
+    "name": "onAuthorized",
+    "type": "function",
+    "strictType": "OnAuthorizedCallback",
+    "required": false,
+    "description": ""
+  },
+  "onValidateMerchant": {
+    "name": "onValidateMerchant",
+    "type": "function",
+    "strictType": "(resolve, reject, validationURL: string) => void",
+    "required": false,
+    "description": ""
+  },
+  "onPaymentMethodSelected": {
+    "name": "onPaymentMethodSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayPaymentMethodSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "onShippingContactSelected": {
+    "name": "onShippingContactSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayShippingContactSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "onShippingMethodSelected": {
+    "name": "onShippingMethodSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayShippingMethodSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "buttonColor": {
+    "name": "buttonColor",
+    "type": "enum",
+    "strictType": "'black' | 'white' | 'white-with-line'",
+    "required": false,
+    "description": "",
+    "values": [
+      "black",
+      "white",
+      "white-with-line"
+    ]
+  },
+  "buttonType": {
+    "name": "buttonType",
+    "type": "object",
+    "strictType": "ApplePayButtonType",
+    "required": false,
+    "description": ""
+  },
+  "showPayButton": {
+    "name": "showPayButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": "Whether to show the pay button."
+  },
+  "environment": {
+    "name": "environment",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The environment to which the request should be sent."
+  },
+  "session": {
+    "name": "session",
+    "type": "object",
+    "strictType": "Session",
+    "required": false,
+    "description": "The session object."
+  },
+  "onChange": {
+    "name": "onChange",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the state changes."
+  },
+  "onValid": {
+    "name": "onValid",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": ""
+  },
+  "beforeSubmit": {
+    "name": "beforeSubmit",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement, actions: any) => Promise<void>",
+    "required": false,
+    "description": "The function to call before submitting the payment details."
+  },
+  "onSubmit": {
+    "name": "onSubmit",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the payment details are submitted."
+  },
+  "onComplete": {
+    "name": "onComplete",
+    "type": "function",
+    "strictType": "(state, element: UIElement) => void",
+    "required": false,
+    "description": ""
+  },
+  "onActionHandled": {
+    "name": "onActionHandled",
+    "type": "function",
+    "strictType": "(rtnObj: ActionHandledReturnObject) => void",
+    "required": false,
+    "description": "The function to call when the action is handled."
+  },
+  "onAdditionalDetails": {
+    "name": "onAdditionalDetails",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when additional details are required."
+  },
+  "onError": {
+    "name": "onError",
+    "type": "function",
+    "strictType": "(error, element?: UIElement) => void",
+    "required": false,
+    "description": "The function to call when an error occurs."
+  },
+  "onPaymentCompleted": {
+    "name": "onPaymentCompleted",
+    "type": "function",
+    "strictType": "(result: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the payment is completed."
+  },
+  "beforeRedirect": {
+    "name": "beforeRedirect",
+    "type": "function",
+    "strictType": "(resolve, reject, redirectData, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call before redirecting the shopper."
+  },
+  "isInstantPayment": {
+    "name": "isInstantPayment",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "type": {
+    "name": "type",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "name": {
+    "name": "name",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "icon": {
+    "name": "icon",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "amount": {
+    "name": "amount",
+    "type": "object",
+    "strictType": "PaymentAmount",
+    "required": false,
+    "description": "The transaction amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "secondaryAmount": {
+    "name": "secondaryAmount",
+    "type": "object",
+    "strictType": "PaymentAmountExtended",
+    "required": false,
+    "description": "The secondary amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "currencyDisplay": {
+        "name": "currencyDisplay",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "brand": {
+    "name": "brand",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "setStatusAutomatically": {
+    "name": "setStatusAutomatically",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "payButton": {
+    "name": "payButton",
+    "type": "function",
+    "strictType": "(options: PayButtonFunctionProps) => h.JSX.Element",
+    "required": false,
+    "description": ""
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The URL to the Adyen Checkout API."
+  },
+  "createFromAction": {
+    "name": "createFromAction",
+    "type": "function",
+    "strictType": "(action: PaymentAction, props: object) => UIElement",
+    "required": false,
+    "description": ""
+  },
+  "paymentMethodType": {
+    "name": "paymentMethodType",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "elementRef": {
+    "name": "elementRef",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "i18n": {
+    "name": "i18n",
+    "type": "object",
+    "strictType": "Language",
+    "required": false,
+    "description": ""
+  }
+}

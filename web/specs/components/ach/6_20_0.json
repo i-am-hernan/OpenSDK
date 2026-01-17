@@ -1,0 +1,37 @@
+{
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "AchPlaceholders",
+    "required": false,
+    "description": ""
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "bankAccountNumber": {
+    "name": "bankAccountNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

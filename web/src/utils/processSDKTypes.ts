@@ -1,8 +1,8 @@
 import { descriptionMap } from "../maps/decriptions";
 import {
-  variantToInterfaceName,
-  VariantToInterfaceName,
-} from "../maps/variantToInterface";
+  getComponentPath,
+  getComponentInterface,
+} from "../maps/components";
 import * as ts from "typescript";
 
 interface ParsedProperty {
@@ -20,38 +20,35 @@ interface ImportInfo {
   importClause?: ts.ImportClause;
 }
 
-const map = variantToInterfaceName as Record<
-  string,
-  Record<string, VariantToInterfaceName>
->;
-
+/**
+ * Get the interface name for checkout configuration
+ * - v6.x uses CoreConfiguration
+ * - v3.x-v5.x uses CoreOptions
+ */
 const getCheckoutInterfaceName = (version: string) => {
-  return /^v6./.test(version) ? "CoreConfiguration" : "CoreOptions";
+  const parsedVersion = version.replace(/^v/, "");
+  const major = parseInt(parsedVersion.split(".")[0], 10);
+  return major >= 6 ? "CoreConfiguration" : "CoreOptions";
 };
 
+/**
+ * Get the path for checkout configuration types
+ * - Before v3.13.2: src/core/types.ts
+ * - v3.13.2+: packages/lib/src/core/types.ts
+ */
 const getCheckoutMainPath = (version: string) => {
-  // Convert version string to a number array for comparison
-  const parsedVersion = version.replaceAll("v", "");
-  const [major, minor, patch] = parsedVersion.split('.').map(Number);
+  const parsedVersion = version.replace(/^v/, "");
+  const [major, minor, patch] = parsedVersion.split(".").map(Number);
 
-  // If version < 3.13.1
+  // If version < 3.13.2
   if (
     major < 3 ||
     (major === 3 && minor < 13) ||
-    (major === 3 && minor === 13 && patch < 2)
+    (major === 3 && minor === 13 && (patch || 0) < 2)
   ) {
     return "src/core/types.ts";
   }
-  // Otherwise, use the default path
   return "packages/lib/src/core/types.ts";
-};
-
-const getVariantInterfaceName = (configuration: string, version: string) => {
-  return map[configuration][version].interfaceName;
-};
-
-const getVariantMainPath = (configuration: string, version: string) => {
-  return map[configuration][version].path;
 };
 
 export const processSDKTypes = async (
@@ -59,15 +56,25 @@ export const processSDKTypes = async (
   configuration: string
 ) => {
   const parsedVersion = version.replaceAll("_", ".");
-  const majorVersion = parsedVersion.split(".")[0];
-  const interfaceName =
-    configuration === "checkout"
-      ? getCheckoutInterfaceName(parsedVersion)
-      : getVariantInterfaceName(configuration, majorVersion);
-  const mainPath =
-    configuration === "checkout"
-      ? getCheckoutMainPath(parsedVersion)
-      : getVariantMainPath(configuration, majorVersion);
+
+  let interfaceName: string | null;
+  let mainPath: string | null;
+
+  if (configuration === "checkout") {
+    interfaceName = getCheckoutInterfaceName(parsedVersion);
+    mainPath = getCheckoutMainPath(parsedVersion);
+  } else {
+    // Use the new component map for payment method components
+    interfaceName = getComponentInterface(configuration, parsedVersion);
+    mainPath = getComponentPath(configuration, parsedVersion);
+
+    if (!interfaceName || !mainPath) {
+      console.error(
+        `Component "${configuration}" not found for version ${parsedVersion}`
+      );
+      return null;
+    }
+  }
   const url = `https://raw.githubusercontent.com/Adyen/adyen-web/refs/tags/${parsedVersion}/${mainPath}`;
   console.log("url: ", url);
   const map = descriptionMap as Record<string, string>;

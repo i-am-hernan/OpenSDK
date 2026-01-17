@@ -1,0 +1,344 @@
+{
+  "brand": {
+    "name": "brand",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "brandsConfiguration": {
+    "name": "brandsConfiguration",
+    "type": "object",
+    "strictType": "CardBrandsConfiguration",
+    "required": false,
+    "description": "",
+    "additionalProperties": {}
+  },
+  "type": {
+    "name": "type",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "groupTypes": {
+    "name": "groupTypes",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "brands": {
+    "name": "brands",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hideCVC": {
+    "name": "hideCVC",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hasCVC": {
+    "name": "hasCVC",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "holderNameRequired": {
+    "name": "holderNameRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "CardConfiguration",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "koreanAuthenticationRequired": {
+        "name": "koreanAuthenticationRequired",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "socialSecurityNumberMode": {
+        "name": "socialSecurityNumberMode",
+        "type": "enum",
+        "strictType": "SocialSecurityMode",
+        "required": false,
+        "description": "",
+        "values": [
+          "show",
+          "hide",
+          "auto"
+        ]
+      },
+      "icon": {
+        "name": "icon",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "brandsConfiguration": {
+        "name": "brandsConfiguration",
+        "type": "object",
+        "strictType": "CardBrandsConfiguration",
+        "required": false,
+        "description": "",
+        "additionalProperties": {}
+      }
+    }
+  },
+  "onLoad": {
+    "name": "onLoad",
+    "type": "function",
+    "strictType": "(event: CbObjOnLoad) => void",
+    "required": false,
+    "description": ""
+  },
+  "onConfigSuccess": {
+    "name": "onConfigSuccess",
+    "type": "function",
+    "strictType": "(event: CbObjOnConfigSuccess) => void",
+    "required": false,
+    "description": ""
+  },
+  "onFieldValid": {
+    "name": "onFieldValid",
+    "type": "function",
+    "strictType": "(event: CbObjOnFieldValid) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBrand": {
+    "name": "onBrand",
+    "type": "function",
+    "strictType": "(event: CbObjOnBrand) => void",
+    "required": false,
+    "description": ""
+  },
+  "onError": {
+    "name": "onError",
+    "type": "function",
+    "strictType": "(error, element?: UIElement) => void",
+    "required": false,
+    "description": "The function to call when an error occurs."
+  },
+  "onFocus": {
+    "name": "onFocus",
+    "type": "function",
+    "strictType": "(event: CbObjOnFocus) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBinValue": {
+    "name": "onBinValue",
+    "type": "function",
+    "strictType": "(event: CbObjOnBinValue) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBinLookup": {
+    "name": "onBinLookup",
+    "type": "function",
+    "strictType": "(event: CbObjOnBinLookup) => void",
+    "required": false,
+    "description": ""
+  },
+  "session": {
+    "name": "session",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "The session object.",
+    "additionalProperties": {
+      "id": {
+        "name": "id",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": "The unique identifier for the payment session."
+      },
+      "data": {
+        "name": "data",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "onChange": {
+    "name": "onChange",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the state changes."
+  },
+  "onValid": {
+    "name": "onValid",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": ""
+  },
+  "beforeSubmit": {
+    "name": "beforeSubmit",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement, actions: any) => Promise<void>",
+    "required": false,
+    "description": "The function to call before submitting the payment details."
+  },
+  "onSubmit": {
+    "name": "onSubmit",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the payment details are submitted."
+  },
+  "onComplete": {
+    "name": "onComplete",
+    "type": "function",
+    "strictType": "(state, element: UIElement) => void",
+    "required": false,
+    "description": ""
+  },
+  "onAdditionalDetails": {
+    "name": "onAdditionalDetails",
+    "type": "function",
+    "strictType": "(state: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when additional details are required."
+  },
+  "onPaymentCompleted": {
+    "name": "onPaymentCompleted",
+    "type": "function",
+    "strictType": "(result: any, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call when the payment is completed."
+  },
+  "beforeRedirect": {
+    "name": "beforeRedirect",
+    "type": "function",
+    "strictType": "(resolve, reject, redirectData, element: UIElement) => void",
+    "required": false,
+    "description": "The function to call before redirecting the shopper."
+  },
+  "name": {
+    "name": "name",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "icon": {
+    "name": "icon",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "amount": {
+    "name": "amount",
+    "type": "object",
+    "strictType": "PaymentAmount",
+    "required": false,
+    "description": "The transaction amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "showPayButton": {
+    "name": "showPayButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": "Whether to show the pay button."
+  },
+  "setStatusAutomatically": {
+    "name": "setStatusAutomatically",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "payButton": {
+    "name": "payButton",
+    "type": "function",
+    "strictType": "(options) => any",
+    "required": false,
+    "description": ""
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The URL to the Adyen Checkout API."
+  },
+  "createFromAction": {
+    "name": "createFromAction",
+    "type": "function",
+    "strictType": "(action: PaymentAction, props: object) => UIElement",
+    "required": false,
+    "description": ""
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "elementRef": {
+    "name": "elementRef",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "i18n": {
+    "name": "i18n",
+    "type": "object",
+    "strictType": "Language",
+    "required": false,
+    "description": ""
+  }
+}

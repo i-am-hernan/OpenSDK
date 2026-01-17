@@ -1,0 +1,93 @@
+{
+  "personalDetailsRequired": {
+    "name": "personalDetailsRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "delay": {
+    "name": "delay",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  },
+  "countdownTime": {
+    "name": "countdownTime",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  },
+  "type": {
+    "name": "type",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "brandLogo": {
+    "name": "brandLogo",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "buttonLabel": {
+    "name": "buttonLabel",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "qrCodeImage": {
+    "name": "qrCodeImage",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "paymentData": {
+    "name": "paymentData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "introduction": {
+    "name": "introduction",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "redirectIntroduction": {
+    "name": "redirectIntroduction",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "timeToPay": {
+    "name": "timeToPay",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "instructions": {
+    "name": "instructions",
+    "type": "string",
+    "strictType": "string | (() => h.JSX.Element)",
+    "required": false,
+    "description": ""
+  },
+  "copyBtn": {
+    "name": "copyBtn",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  }
+}

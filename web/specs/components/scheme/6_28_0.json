@@ -1,0 +1,1528 @@
+{
+  "autoFocus": {
+    "name": "autoFocus",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "billingAddressAllowedCountries": {
+    "name": "billingAddressAllowedCountries",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "billingAddressMode": {
+    "name": "billingAddressMode",
+    "type": "enum",
+    "strictType": "'full' | 'partial' | 'none'",
+    "required": false,
+    "description": "",
+    "values": [
+      "full",
+      "partial",
+      "none"
+    ]
+  },
+  "billingAddressRequired": {
+    "name": "billingAddressRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "billingAddressRequiredFields": {
+    "name": "billingAddressRequiredFields",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "brand": {
+    "name": "brand",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "brands": {
+    "name": "brands",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "brandsConfiguration": {
+    "name": "brandsConfiguration",
+    "type": "object",
+    "strictType": "CardBrandsConfiguration",
+    "required": false,
+    "description": "",
+    "additionalProperties": {}
+  },
+  "challengeWindowSize": {
+    "name": "challengeWindowSize",
+    "type": "enum",
+    "strictType": "ChallengeWindowSize",
+    "required": false,
+    "description": "",
+    "values": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05"
+    ]
+  },
+  "clickToPayConfiguration": {
+    "name": "clickToPayConfiguration",
+    "type": "object",
+    "strictType": "ClickToPayProps",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "shopperEmail": {
+        "name": "shopperEmail",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": "The shopper's email address."
+      },
+      "telephoneNumber": {
+        "name": "telephoneNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": "The shopper's telephone number."
+      },
+      "merchantDisplayName": {
+        "name": "merchantDisplayName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "locale": {
+        "name": "locale",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": "The shopper's locale. For example, `en-US`."
+      },
+      "disableOtpAutoFocus": {
+        "name": "disableOtpAutoFocus",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "fastlaneConfiguration": {
+    "name": "fastlaneConfiguration",
+    "type": "object",
+    "strictType": "FastlaneSignupConfiguration",
+    "required": false,
+    "description": ""
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "CardBackendConfiguration",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "visaSrciDpaId": {
+        "name": "visaSrciDpaId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "visaSrcInitiatorId": {
+        "name": "visaSrcInitiatorId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "mcSrcClientId": {
+        "name": "mcSrcClientId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "mcDpaId": {
+        "name": "mcDpaId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantIdentifier": {
+        "name": "merchantIdentifier",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantOrigin": {
+        "name": "merchantOrigin",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "gatewayMerchantId": {
+        "name": "gatewayMerchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "publicKeyId": {
+        "name": "publicKeyId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "region": {
+        "name": "region",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantName": {
+        "name": "merchantName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "intent": {
+        "name": "intent",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "koreanAuthenticationRequired": {
+        "name": "koreanAuthenticationRequired",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "socialSecurityNumberMode": {
+        "name": "socialSecurityNumberMode",
+        "type": "enum",
+        "strictType": "SocialSecurityMode",
+        "required": false,
+        "description": "",
+        "values": [
+          "show",
+          "hide",
+          "auto"
+        ]
+      },
+      "icon": {
+        "name": "icon",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "brandsConfiguration": {
+        "name": "brandsConfiguration",
+        "type": "object",
+        "strictType": "CardBrandsConfiguration",
+        "required": false,
+        "description": "",
+        "additionalProperties": {}
+      }
+    }
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's country code."
+  },
+  "data": {
+    "name": "data",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "holderName": {
+        "name": "holderName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "billingAddress": {
+        "name": "billingAddress",
+        "type": "object",
+        "strictType": "Partial",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "_disableClickToPay": {
+    "name": "_disableClickToPay",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "disableIOSArrowKeys": {
+    "name": "disableIOSArrowKeys",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "disclaimerMessage": {
+    "name": "disclaimerMessage",
+    "type": "object",
+    "strictType": "DisclaimerMsgObject",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "message": {
+        "name": "message",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "linkText": {
+        "name": "linkText",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "link": {
+        "name": "link",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "doBinLookup": {
+    "name": "doBinLookup",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "expiryMonth": {
+    "name": "expiryMonth",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "exposeExpiryDate": {
+    "name": "exposeExpiryDate",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "forceCompat": {
+    "name": "forceCompat",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "fundingSource": {
+    "name": "fundingSource",
+    "type": "enum",
+    "strictType": "'debit' | 'credit'",
+    "required": false,
+    "description": "",
+    "values": [
+      "debit",
+      "credit"
+    ]
+  },
+  "hasCVC": {
+    "name": "hasCVC",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "holderName": {
+    "name": "holderName",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "hideCVC": {
+    "name": "hideCVC",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "holderNameRequired": {
+    "name": "holderNameRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "id": {
+    "name": "id",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The unique identifier for the payment session."
+  },
+  "installmentOptions": {
+    "name": "installmentOptions",
+    "type": "object",
+    "strictType": "InstallmentOptions",
+    "required": false,
+    "description": "",
+    "additionalProperties": {}
+  },
+  "keypadFix": {
+    "name": "keypadFix",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "lastFour": {
+    "name": "lastFour",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "legacyInputMode": {
+    "name": "legacyInputMode",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "maskSecurityCode": {
+    "name": "maskSecurityCode",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "minimumExpiryDate": {
+    "name": "minimumExpiryDate",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "name": {
+    "name": "name",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "onAddressLookup": {
+    "name": "onAddressLookup",
+    "type": "function",
+    "strictType": "OnAddressLookupType",
+    "required": false,
+    "description": ""
+  },
+  "onAddressSelected": {
+    "name": "onAddressSelected",
+    "type": "function",
+    "strictType": "OnAddressSelectedType",
+    "required": false,
+    "description": ""
+  },
+  "onBinLookup": {
+    "name": "onBinLookup",
+    "type": "function",
+    "strictType": "(event: CardBinLookupData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBinValue": {
+    "name": "onBinValue",
+    "type": "function",
+    "strictType": "(event: CardBinValueData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBlur": {
+    "name": "onBlur",
+    "type": "function",
+    "strictType": "(event: CardFocusData | ComponentFocusObject) => void",
+    "required": false,
+    "description": ""
+  },
+  "onBrand": {
+    "name": "onBrand",
+    "type": "function",
+    "strictType": "(event: CardBrandData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onConfigSuccess": {
+    "name": "onConfigSuccess",
+    "type": "function",
+    "strictType": "(event: CardConfigSuccessData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onAllValid": {
+    "name": "onAllValid",
+    "type": "function",
+    "strictType": "(event: CardAllValidData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onFieldValid": {
+    "name": "onFieldValid",
+    "type": "function",
+    "strictType": "(event: CardFieldValidData) => void",
+    "required": false,
+    "description": ""
+  },
+  "onFocus": {
+    "name": "onFocus",
+    "type": "function",
+    "strictType": "(event: CardFocusData | ComponentFocusObject) => void",
+    "required": false,
+    "description": ""
+  },
+  "onLoad": {
+    "name": "onLoad",
+    "type": "function",
+    "strictType": "(event: CardLoadData) => void",
+    "required": false,
+    "description": ""
+  },
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "CardPlaceholders",
+    "required": false,
+    "description": ""
+  },
+  "positionHolderNameOnTop": {
+    "name": "positionHolderNameOnTop",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showBrandIcon": {
+    "name": "showBrandIcon",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showContextualElement": {
+    "name": "showContextualElement",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showInstallmentAmounts": {
+    "name": "showInstallmentAmounts",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "showStoreDetailsCheckbox": {
+    "name": "showStoreDetailsCheckbox",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "styles": {
+    "name": "styles",
+    "type": "object",
+    "strictType": "StylesObject",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "base": {
+        "name": "base",
+        "type": "object",
+        "strictType": "StyleDefinitions",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "background": {
+            "name": "background",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "caretColor": {
+            "name": "caretColor",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "color": {
+            "name": "color",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "display": {
+            "name": "display",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "font": {
+            "name": "font",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontFamily": {
+            "name": "fontFamily",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSize": {
+            "name": "fontSize",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSizeAdjust": {
+            "name": "fontSizeAdjust",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSmoothing": {
+            "name": "fontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStretch": {
+            "name": "fontStretch",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStyle": {
+            "name": "fontStyle",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariant": {
+            "name": "fontVariant",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantAlternates": {
+            "name": "fontVariantAlternates",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantCaps": {
+            "name": "fontVariantCaps",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantEastAsian": {
+            "name": "fontVariantEastAsian",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantLigatures": {
+            "name": "fontVariantLigatures",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantNumeric": {
+            "name": "fontVariantNumeric",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontWeight": {
+            "name": "fontWeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "letterSpacing": {
+            "name": "letterSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "lineHeight": {
+            "name": "lineHeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozOsxFontSmoothing": {
+            "name": "mozOsxFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozTransition": {
+            "name": "mozTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "outline": {
+            "name": "outline",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "opacity": {
+            "name": "opacity",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "padding": {
+            "name": "padding",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textAlign": {
+            "name": "textAlign",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textShadow": {
+            "name": "textShadow",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "transition": {
+            "name": "transition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitFontSmoothing": {
+            "name": "webkitFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitTransition": {
+            "name": "webkitTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "wordSpacing": {
+            "name": "wordSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          }
+        }
+      },
+      "error": {
+        "name": "error",
+        "type": "object",
+        "strictType": "StyleDefinitions",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "background": {
+            "name": "background",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "caretColor": {
+            "name": "caretColor",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "color": {
+            "name": "color",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "display": {
+            "name": "display",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "font": {
+            "name": "font",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontFamily": {
+            "name": "fontFamily",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSize": {
+            "name": "fontSize",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSizeAdjust": {
+            "name": "fontSizeAdjust",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSmoothing": {
+            "name": "fontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStretch": {
+            "name": "fontStretch",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStyle": {
+            "name": "fontStyle",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariant": {
+            "name": "fontVariant",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantAlternates": {
+            "name": "fontVariantAlternates",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantCaps": {
+            "name": "fontVariantCaps",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantEastAsian": {
+            "name": "fontVariantEastAsian",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantLigatures": {
+            "name": "fontVariantLigatures",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantNumeric": {
+            "name": "fontVariantNumeric",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontWeight": {
+            "name": "fontWeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "letterSpacing": {
+            "name": "letterSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "lineHeight": {
+            "name": "lineHeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozOsxFontSmoothing": {
+            "name": "mozOsxFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozTransition": {
+            "name": "mozTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "outline": {
+            "name": "outline",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "opacity": {
+            "name": "opacity",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "padding": {
+            "name": "padding",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textAlign": {
+            "name": "textAlign",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textShadow": {
+            "name": "textShadow",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "transition": {
+            "name": "transition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitFontSmoothing": {
+            "name": "webkitFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitTransition": {
+            "name": "webkitTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "wordSpacing": {
+            "name": "wordSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          }
+        }
+      },
+      "validated": {
+        "name": "validated",
+        "type": "object",
+        "strictType": "StyleDefinitions",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "background": {
+            "name": "background",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "caretColor": {
+            "name": "caretColor",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "color": {
+            "name": "color",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "display": {
+            "name": "display",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "font": {
+            "name": "font",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontFamily": {
+            "name": "fontFamily",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSize": {
+            "name": "fontSize",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSizeAdjust": {
+            "name": "fontSizeAdjust",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSmoothing": {
+            "name": "fontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStretch": {
+            "name": "fontStretch",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStyle": {
+            "name": "fontStyle",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariant": {
+            "name": "fontVariant",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantAlternates": {
+            "name": "fontVariantAlternates",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantCaps": {
+            "name": "fontVariantCaps",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantEastAsian": {
+            "name": "fontVariantEastAsian",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantLigatures": {
+            "name": "fontVariantLigatures",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantNumeric": {
+            "name": "fontVariantNumeric",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontWeight": {
+            "name": "fontWeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "letterSpacing": {
+            "name": "letterSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "lineHeight": {
+            "name": "lineHeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozOsxFontSmoothing": {
+            "name": "mozOsxFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozTransition": {
+            "name": "mozTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "outline": {
+            "name": "outline",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "opacity": {
+            "name": "opacity",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "padding": {
+            "name": "padding",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textAlign": {
+            "name": "textAlign",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textShadow": {
+            "name": "textShadow",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "transition": {
+            "name": "transition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitFontSmoothing": {
+            "name": "webkitFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitTransition": {
+            "name": "webkitTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "wordSpacing": {
+            "name": "wordSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          }
+        }
+      },
+      "placeholder": {
+        "name": "placeholder",
+        "type": "object",
+        "strictType": "StyleDefinitions",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "background": {
+            "name": "background",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "caretColor": {
+            "name": "caretColor",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "color": {
+            "name": "color",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "display": {
+            "name": "display",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "font": {
+            "name": "font",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontFamily": {
+            "name": "fontFamily",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSize": {
+            "name": "fontSize",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSizeAdjust": {
+            "name": "fontSizeAdjust",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontSmoothing": {
+            "name": "fontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStretch": {
+            "name": "fontStretch",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontStyle": {
+            "name": "fontStyle",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariant": {
+            "name": "fontVariant",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantAlternates": {
+            "name": "fontVariantAlternates",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantCaps": {
+            "name": "fontVariantCaps",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantEastAsian": {
+            "name": "fontVariantEastAsian",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantLigatures": {
+            "name": "fontVariantLigatures",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontVariantNumeric": {
+            "name": "fontVariantNumeric",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "fontWeight": {
+            "name": "fontWeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "letterSpacing": {
+            "name": "letterSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "lineHeight": {
+            "name": "lineHeight",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozOsxFontSmoothing": {
+            "name": "mozOsxFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "mozTransition": {
+            "name": "mozTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "outline": {
+            "name": "outline",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "opacity": {
+            "name": "opacity",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "padding": {
+            "name": "padding",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textAlign": {
+            "name": "textAlign",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "textShadow": {
+            "name": "textShadow",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "transition": {
+            "name": "transition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitFontSmoothing": {
+            "name": "webkitFontSmoothing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "webkitTransition": {
+            "name": "webkitTransition",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          },
+          "wordSpacing": {
+            "name": "wordSpacing",
+            "type": "string",
+            "strictType": "string",
+            "required": false,
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "supportedShopperInteractions": {
+    "name": "supportedShopperInteractions",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "trimTrailingSeparator": {
+    "name": "trimTrailingSeparator",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "type": {
+    "name": "type",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

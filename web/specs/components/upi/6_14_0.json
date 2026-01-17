@@ -1,0 +1,44 @@
+{
+  "defaultMode": {
+    "name": "defaultMode",
+    "type": "object",
+    "strictType": "UpiMode",
+    "required": false,
+    "description": ""
+  },
+  "apps": {
+    "name": "apps",
+    "type": "object",
+    "strictType": "Array",
+    "required": false,
+    "description": ""
+  },
+  "url": {
+    "name": "url",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "paymentData": {
+    "name": "paymentData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "qrCodeData": {
+    "name": "qrCodeData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "brandLogo": {
+    "name": "brandLogo",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

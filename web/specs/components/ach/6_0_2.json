@@ -1,0 +1,44 @@
+{
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "holderNameRequired": {
+    "name": "holderNameRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": true,
+    "description": ""
+  },
+  "bankAccountNumber": {
+    "name": "bankAccountNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": true,
+    "description": ""
+  },
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "Placeholders",
+    "required": false,
+    "description": ""
+  }
+}

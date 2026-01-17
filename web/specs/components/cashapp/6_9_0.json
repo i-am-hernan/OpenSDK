@@ -1,0 +1,127 @@
+{
+  "storePaymentMethod": {
+    "name": "storePaymentMethod",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": ""
+  },
+  "referenceId": {
+    "name": "referenceId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "redirectURL": {
+    "name": "redirectURL",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "button": {
+    "name": "button",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "shape": {
+        "name": "shape",
+        "type": "enum",
+        "strictType": "'semiround' | 'round'",
+        "required": false,
+        "description": "",
+        "values": [
+          "semiround",
+          "round"
+        ]
+      },
+      "size": {
+        "name": "size",
+        "type": "enum",
+        "strictType": "'medium' | 'small'",
+        "required": false,
+        "description": "",
+        "values": [
+          "medium",
+          "small"
+        ]
+      },
+      "theme": {
+        "name": "theme",
+        "type": "enum",
+        "strictType": "'dark' | 'light'",
+        "required": false,
+        "description": "",
+        "values": [
+          "dark",
+          "light"
+        ]
+      },
+      "width": {
+        "name": "width",
+        "type": "enum",
+        "strictType": "'static' | 'full'",
+        "required": false,
+        "description": "",
+        "values": [
+          "static",
+          "full"
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "clientId": {
+        "name": "clientId",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "scopeId": {
+        "name": "scopeId",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "cashtag": {
+    "name": "cashtag",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}
