@@ -15,54 +15,50 @@ export const components: Record<
         path: { "3.14.0": "packages/lib/src/components/Ach/components/AchInput/defaultProps.ts", "5.24.0": "packages/lib/src/components/Ach/types.ts" },
         interface: { "3.14.0": "default", "5.24.0": "ACHInputProps" }
     },
-
-
-
-
-    Address: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
-    },
-    Affirm: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
-    },
-    AfterPay: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
-    },
     AmazonPay: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.20.0": "packages/lib/src/components/AmazonPay/types.ts" },
+        interface: { "3.20.0": "AmazonPayElementProps", "6.0.0": "AmazonPayConfiguration" }
     },
     ApplePay: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.10.0": "src/components/ApplePay/types.ts", "3.14.0": "packages/lib/src/components/ApplePay/types.ts" },
+        interface: { "3.10.0": "ApplePayElementProps", "6.0.0": "ApplePayConfiguration" }
     },
     Atome: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "6.13.0": "packages/lib/src/components/Atome/types.ts" },
+        interface: { "6.13.0": "AtomeConfiguration" }
     },
     BacsDD: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.19.0": "packages/lib/src/components/BacsDD/components/types.ts", "6.0.0": "packages/lib/src/components/BacsDD/types.ts" },
+        interface: { "3.19.0": "BacsInputData", "6.0.0": "BacsElementData" }
     },
     BankTransfer: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.19.0": "packages/lib/src/components/BankTransfer/types.ts"},
+        interface: { "3.19.0": "BankTransferProps", "6.0.0": "BankTransferConfiguration" }
     },
+
+
+
+
+
+    
     BcmcMobile: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.10.0": "packages/lib/src/components/BcmcMobile/types.ts" },
+        interface: { "3.10.0": "BcmcMobileProps" }
     },
+
+
     BillDesk: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "5.49.0": "packages/lib/src/components/BillDesk/types.ts" },
+        interface: { "5.49.0": "BillDeskProps" }
     },
     Blik: {
-        path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
-        interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
+        path: { "3.10.0": "packages/lib/src/components/Blik/types.ts" },
+        interface: { "3.10.0": "BlikProps" }
     },
+
+
+
+
     Boleto: {
         path: { "3.10.0": "<FILLER_PATH>", "6.0.0": "<FILLER_PATH>" },
         interface: { "3.10.0": "<FILLER_INTERFACE>", "6.0.0": "<FILLER_INTERFACE>" }
