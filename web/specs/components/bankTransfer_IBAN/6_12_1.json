@@ -1,0 +1,16 @@
+{
+  "reference": {
+    "name": "reference",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "showEmailAddress": {
+    "name": "showEmailAddress",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  }
+}

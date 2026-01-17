@@ -1,0 +1,81 @@
+{
+  "data": {
+    "name": "data",
+    "type": "object",
+    "strictType": "AchFormPrefillData",
+    "required": false,
+    "description": ""
+  },
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "AchPlaceholders",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "accountTypeSelector": {
+        "name": "accountTypeSelector",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "ownerName": {
+        "name": "ownerName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "routingNumber": {
+        "name": "routingNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "accountNumber": {
+        "name": "accountNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "accountNumberVerification": {
+        "name": "accountNumberVerification",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "hasHolderName": {
+    "name": "hasHolderName",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "bankAccountNumber": {
+    "name": "bankAccountNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

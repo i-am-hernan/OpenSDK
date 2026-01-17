@@ -1,0 +1,46 @@
+{
+  "paymentMethod": {
+    "name": "paymentMethod",
+    "type": "object",
+    "strictType": "object",
+    "required": true,
+    "description": "",
+    "additionalProperties": {
+      "type": {
+        "name": "type",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "holderName": {
+        "name": "holderName",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "bankAccountNumber": {
+        "name": "bankAccountNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "bankLocationId": {
+        "name": "bankLocationId",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "shopperEmail": {
+    "name": "shopperEmail",
+    "type": "string",
+    "strictType": "string",
+    "required": true,
+    "description": "The shopper's email address."
+  }
+}

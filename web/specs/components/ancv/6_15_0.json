@@ -1,0 +1,30 @@
+{
+  "paymentData": {
+    "name": "paymentData",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "data": {
+    "name": "data",
+    "type": "object",
+    "strictType": "ANCVDataState",
+    "required": true,
+    "description": ""
+  },
+  "onOrderRequest": {
+    "name": "onOrderRequest",
+    "type": "function",
+    "strictType": "any",
+    "required": false,
+    "description": "The function to call when the order is requested."
+  },
+  "onOrderUpdated": {
+    "name": "onOrderUpdated",
+    "type": "function",
+    "strictType": "any",
+    "required": false,
+    "description": "The function to call when the order is updated."
+  }
+}

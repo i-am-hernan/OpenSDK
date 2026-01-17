@@ -1,0 +1,65 @@
+{
+  "pinRequired": {
+    "name": "pinRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "expiryDateRequired": {
+    "name": "expiryDateRequired",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "brandsConfiguration": {
+    "name": "brandsConfiguration",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "brand": {
+    "name": "brand",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "onOrderUpdated": {
+    "name": "onOrderUpdated",
+    "type": "function",
+    "strictType": "(data) => void",
+    "required": false,
+    "description": "The function to call when the order is updated."
+  },
+  "onBalanceCheck": {
+    "name": "onBalanceCheck",
+    "type": "function",
+    "strictType": "onBalanceCheckCallbackType",
+    "required": false,
+    "description": "The function to call when the balance is checked."
+  },
+  "onOrderRequest": {
+    "name": "onOrderRequest",
+    "type": "function",
+    "strictType": "onOrderRequestCallbackType",
+    "required": false,
+    "description": "The function to call when the order is requested."
+  },
+  "onRequiringConfirmation": {
+    "name": "onRequiringConfirmation",
+    "type": "function",
+    "strictType": "onRequiringConfirmationCallbackType",
+    "required": false,
+    "description": ""
+  },
+  "fieldsLayoutComponent": {
+    "name": "fieldsLayoutComponent",
+    "type": "object",
+    "strictType": "FunctionComponent",
+    "required": false,
+    "description": ""
+  }
+}

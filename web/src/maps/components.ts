@@ -19,7 +19,7 @@ export interface ComponentName {
  */
 export const components: Record<string, ComponentName> = {
   // ACH Direct Debit
-  Ach: {
+  ach: {
     path: {
       "3.14.0": "packages/lib/src/components/Ach/components/AchInput/defaultProps.ts",
       "5.24.0": "packages/lib/src/components/Ach/types.ts",
@@ -32,7 +32,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Affirm (introduced ~v4.0.0)
-  Affirm: {
+  affirm: {
     path: {
       "4.0.0": "packages/lib/src/components/Affirm/Affirm.tsx",
     },
@@ -43,7 +43,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // AfterPay
-  AfterPay: {
+  afterpaytouch: {
     path: {
       "3.10.0": "src/components/AfterPay/AfterPay.tsx",
       "3.14.0": "packages/lib/src/components/AfterPay/AfterPay.tsx",
@@ -55,7 +55,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Amazon Pay (introduced v3.20.0)
-  AmazonPay: {
+  amazonpay: {
     path: {
       "3.20.0": "packages/lib/src/components/AmazonPay/types.ts",
     },
@@ -66,7 +66,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // ANCV (introduced ~v5.52.0)
-  ANCV: {
+  ancv: {
     path: {
       "5.52.0": "packages/lib/src/components/ANCV/ANCV.tsx",
       "6.0.0": "packages/lib/src/components/ANCV/types.ts",
@@ -78,7 +78,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Apple Pay
-  ApplePay: {
+  applepay: {
     path: {
       "3.10.0": "src/components/ApplePay/types.ts",
       "3.14.0": "packages/lib/src/components/ApplePay/types.ts",
@@ -90,7 +90,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Atome (introduced ~v5.30.0)
-  Atome: {
+  atome: {
     path: {
       "5.30.0": "packages/lib/src/components/Atome/Atome.tsx",
       "6.13.0": "packages/lib/src/components/Atome/types.ts",
@@ -102,7 +102,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Bacs Direct Debit (introduced v3.19.0)
-  BacsDD: {
+  directdebit_GB: {
     path: {
       "3.19.0": "packages/lib/src/components/BacsDD/components/types.ts",
       "6.0.0": "packages/lib/src/components/BacsDD/types.ts",
@@ -114,7 +114,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Bank Transfer (introduced v3.19.0)
-  BankTransfer: {
+  bankTransfer_IBAN: {
     path: {
       "3.19.0": "packages/lib/src/components/BankTransfer/types.ts",
     },
@@ -125,7 +125,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // BCMC Mobile
-  BcmcMobile: {
+  bcmc_mobile: {
     path: {
       "3.10.0": "src/components/BcmcMobile/types.ts",
       "3.14.0": "packages/lib/src/components/BcmcMobile/types.ts",
@@ -135,18 +135,8 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
-  // BillDesk
-  BillDesk: {
-    path: {
-      "5.49.0": "packages/lib/src/components/BillDesk/types.ts",
-    },
-    interface: {
-      "5.49.0": "BillDeskProps",
-    },
-  },
-
   // BLIK
-  Blik: {
+  blik: {
     path: {
       "3.10.0": "src/components/Blik/types.ts",
       "3.14.0": "packages/lib/src/components/Blik/types.ts",
@@ -159,7 +149,9 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Boleto
-  Boleto: {
+  // Needs to be revisted as the paymentmethodvariant values are differe:
+  // boletobancario, boletobancario_itau, boletobancario_santander, primeiro_boleto
+  boleto: {
     path: {
       "3.10.0": "src/components/Boleto/Boleto.tsx",
       "3.14.0": "packages/lib/src/components/Boleto/types.ts",
@@ -170,9 +162,52 @@ export const components: Record<string, ComponentName> = {
       "6.0.0": "BoletoElementProps", // Still uses ElementProps in v6
     },
   },
-
+  boletobancario: {
+    path: {
+      "3.10.0": "src/components/Boleto/Boleto.tsx",
+      "3.14.0": "packages/lib/src/components/Boleto/types.ts",
+    },
+    interface: {
+      "3.10.0": "UIElementProps",
+      "3.14.0": "BoletoElementProps",
+      "6.0.0": "BoletoElementProps", // Still uses ElementProps in v6
+    },
+  },
+  boletobancario_itau: {
+    path: {
+      "3.10.0": "src/components/Boleto/Boleto.tsx",
+      "3.14.0": "packages/lib/src/components/Boleto/types.ts",
+    },
+    interface: {
+      "3.10.0": "UIElementProps",
+      "3.14.0": "BoletoElementProps",
+      "6.0.0": "BoletoElementProps", // Still uses ElementProps in v6
+    },
+  },
+  boletobancario_santander: {
+    path: {
+      "3.10.0": "src/components/Boleto/Boleto.tsx",
+      "3.14.0": "packages/lib/src/components/Boleto/types.ts",
+    },
+    interface: {
+      "3.10.0": "UIElementProps",
+      "3.14.0": "BoletoElementProps",
+      "6.0.0": "BoletoElementProps", // Still uses ElementProps in v6
+    },
+  },
+  primeiro_boleto: {
+    path: {
+      "3.10.0": "src/components/Boleto/Boleto.tsx",
+      "3.14.0": "packages/lib/src/components/Boleto/types.ts",
+    },
+    interface: {
+      "3.10.0": "UIElementProps",
+      "3.14.0": "BoletoElementProps",
+      "6.0.0": "BoletoElementProps", // Still uses ElementProps in v6
+    },
+  },
   // Card
-  Card: {
+  scheme: {
     path: {
       "3.10.0": "src/components/Card/Card.tsx", // No types.ts in v3.10.0
       "3.14.0": "packages/lib/src/components/Card/types.ts",
@@ -185,7 +220,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Cash App Pay (introduced ~v5.45.0)
-  CashAppPay: {
+  cashapp: {
     path: {
       "5.45.0": "packages/lib/src/components/CashAppPay/types.ts",
     },
@@ -196,7 +231,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Click to Pay (introduced ~v5.45.0)
-  ClickToPay: {
+  clicktopay: {
     path: {
       "5.45.0": "packages/lib/src/components/ClickToPay/types.ts",
     },
@@ -206,18 +241,8 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
-  // Custom Card
-  CustomCard: {
-    path: {
-      "6.0.0": "packages/lib/src/components/CustomCard/types.ts",
-    },
-    interface: {
-      "6.0.0": "CustomCardConfiguration",
-    },
-  },
-
   // Doku
-  Doku: {
+  doku: {
     path: {
       "3.10.0": "src/components/Doku/Doku.tsx",
       "3.14.0": "packages/lib/src/components/Doku/Doku.tsx",
@@ -228,7 +253,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Donation
-  Donation: {
+  donation: {
     path: {
       "3.10.0": "src/components/Donation/types.ts",
       "3.14.0": "packages/lib/src/components/Donation/types.ts",
@@ -240,7 +265,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Dotpay
-  Dotpay: {
+  dotpay: {
     path: {
       "3.10.0": "src/components/Dotpay/Dotpay.tsx",
       "3.14.0": "packages/lib/src/components/Dotpay/Dotpay.tsx",
@@ -251,7 +276,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Dragonpay
-  Dragonpay: {
+  dragonpay: {
     path: {
       "3.10.0": "src/components/Dragonpay/Dragonpay.tsx",
       "3.14.0": "packages/lib/src/components/Dragonpay/Dragonpay.tsx",
@@ -262,7 +287,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Drop-in
-  Dropin: {
+  dropin: {
     path: {
       "3.10.0": "src/components/Dropin/types.ts",
       "3.14.0": "packages/lib/src/components/Dropin/types.ts",
@@ -274,7 +299,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // DuitNow (introduced ~v5.35.0)
-  DuitNow: {
+  duitnow: {
     path: {
       "5.35.0": "packages/lib/src/components/DuitNow/DuitNow.tsx",
     },
@@ -285,7 +310,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // EPS
-  EPS: {
+  eps: {
     path: {
       "3.10.0": "src/components/EPS/EPS.tsx",
       "3.14.0": "packages/lib/src/components/EPS/EPS.tsx",
@@ -297,7 +322,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Econtext
-  Econtext: {
+  econtext: {
     path: {
       "3.10.0": "src/components/Econtext/Econtext.tsx",
       "3.14.0": "packages/lib/src/components/Econtext/Econtext.tsx",
@@ -308,7 +333,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // FacilyPay
-  FacilyPay: {
+  facilypay_3x: {
     path: {
       "3.10.0": "src/components/FacilyPay/FacilyPay.tsx",
       "3.14.0": "packages/lib/src/components/FacilyPay/FacilyPay.tsx",
@@ -319,7 +344,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Gift Card
-  Giftcard: {
+  giftcard: {
     path: {
       "3.10.0": "src/components/Giftcard/Giftcard.tsx",
       "3.14.0": "packages/lib/src/components/Giftcard/Giftcard.tsx",
@@ -332,7 +357,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Giropay
-  Giropay: {
+  giropay: {
     path: {
       "3.10.0": "src/components/Giropay/Giropay.tsx",
       "3.14.0": "packages/lib/src/components/Giropay/Giropay.tsx",
@@ -343,7 +368,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Google Pay
-  GooglePay: {
+  googlepay: {
     path: {
       "3.10.0": "src/components/GooglePay/types.ts",
       "3.14.0": "packages/lib/src/components/GooglePay/types.ts",
@@ -355,7 +380,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Klarna (introduced v5.0.0)
-  Klarna: {
+  klarna: {
     path: {
       "5.0.0": "packages/lib/src/components/Klarna/types.ts",
     },
@@ -365,8 +390,35 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
+  klarna_account: {
+    path: {
+      "5.0.0": "packages/lib/src/components/Klarna/types.ts",
+    },
+    interface: {
+      "5.0.0": "KlarnaPaymentsProps",
+      "6.0.0": "KlarnaConfiguration",
+    },
+  },
+  klarna_paynow: {
+    path: {
+      "5.0.0": "packages/lib/src/components/Klarna/types.ts",
+    },
+    interface: {
+      "5.0.0": "KlarnaPaymentsProps",
+      "6.0.0": "KlarnaConfiguration",
+    },
+  },
+  klarna_b2b: {
+    path: {
+      "5.0.0": "packages/lib/src/components/Klarna/types.ts",
+    },
+    interface: {
+      "5.0.0": "KlarnaPaymentsProps",
+      "6.0.0": "KlarnaConfiguration",
+    },
+  },
   // MB Way
-  MBWay: {
+  mbway: {
     path: {
       "3.10.0": "src/components/MBWay/MBWay.tsx",
       "3.14.0": "packages/lib/src/components/MBWay/MBWay.tsx",
@@ -378,7 +430,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Meal Voucher FR (introduced ~v5.35.0)
-  MealVoucherFR: {
+  mealVoucher_FR: {
     path: {
       "5.35.0": "packages/lib/src/components/MealVoucherFR/types.ts",
     },
@@ -389,7 +441,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // MolPay eBanking
-  MolPayEBanking: {
+  molpay_ebanking_fpx_MY: {
     path: {
       "3.10.0": "src/components/MolPayEBanking/MolPayEBanking.tsx",
       "3.14.0": "packages/lib/src/components/MolPayEBanking/MolPayEBanking.tsx",
@@ -400,7 +452,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Multibanco
-  Multibanco: {
+  multibanco: {
     path: {
       "3.10.0": "src/components/Multibanco/Multibanco.tsx",
       "3.14.0": "packages/lib/src/components/Multibanco/Multibanco.tsx",
@@ -412,7 +464,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Online Banking CZ (introduced ~v5.35.0)
-  OnlineBankingCZ: {
+  onlineBanking_CZ: {
     path: {
       "5.35.0": "packages/lib/src/components/OnlineBankingCZ/OnlineBankingCZ.tsx",
     },
@@ -423,7 +475,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Online Banking FI (introduced v6.0.0)
-  OnlineBankingFI: {
+  onlineBanking_FI: {
     path: {
       "6.0.0": "packages/lib/src/components/OnlineBankingFI/OnlineBankingFI.tsx",
     },
@@ -433,7 +485,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Online Banking IN (introduced ~v5.35.0)
-  OnlineBankingIN: {
+  onlineBanking_IN: {
     path: {
       "5.35.0": "packages/lib/src/components/OnlineBankingIN/OnlineBankingIN.tsx",
     },
@@ -444,7 +496,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Online Banking PL (introduced ~v5.35.0)
-  OnlineBankingPL: {
+  onlineBanking_PL: {
     path: {
       "5.35.0": "packages/lib/src/components/OnlineBankingPL/OnlineBankingPL.tsx",
     },
@@ -455,7 +507,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Online Banking SK (introduced ~v5.35.0)
-  OnlineBankingSK: {
+  onlineBanking_SK: {
     path: {
       "5.35.0": "packages/lib/src/components/OnlineBankingSK/OnlineBankingSK.tsx",
     },
@@ -466,7 +518,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Oxxo
-  Oxxo: {
+  oxxo: {
     path: {
       "3.10.0": "src/components/Oxxo/Oxxo.tsx",
       "3.14.0": "packages/lib/src/components/Oxxo/Oxxo.tsx",
@@ -477,7 +529,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Pay By Bank (introduced ~v5.35.0)
-  PayByBank: {
+  paybybank: {
     path: {
       "5.35.0": "packages/lib/src/components/PayByBank/types.ts",
     },
@@ -488,7 +540,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Pay By Bank Pix (introduced ~v6.15.0)
-  PayByBankPix: {
+  paybybank_pix: {
     path: {
       "6.15.0": "packages/lib/src/components/PayByBankPix/types.ts",
     },
@@ -498,7 +550,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Pay By Bank US (introduced ~v6.20.0)
-  PayByBankUS: {
+  paybybank_US: {
     path: {
       "6.20.0": "packages/lib/src/components/PayByBankUS/types.ts",
     },
@@ -508,7 +560,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayMe (introduced ~v5.60.0)
-  PayMe: {
+  payme: {
     path: {
       "5.60.0": "packages/lib/src/components/PayMe/PayMe.tsx",
     },
@@ -519,7 +571,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayNow (introduced ~v5.35.0)
-  PayNow: {
+  paynow: {
     path: {
       "5.35.0": "packages/lib/src/components/PayNow/PayNow.tsx",
     },
@@ -530,7 +582,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayPal
-  PayPal: {
+  paypal: {
     path: {
       "3.10.0": "src/components/PayPal/types.ts",
       "3.14.0": "packages/lib/src/components/PayPal/types.ts",
@@ -543,7 +595,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayPal Fastlane (introduced ~v6.10.0)
-  PayPalFastlane: {
+  fastlane: {
     path: {
       "6.10.0": "packages/lib/src/components/PayPalFastlane/types.ts",
     },
@@ -553,7 +605,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayTo (introduced ~v6.5.0)
-  PayTo: {
+  payto: {
     path: {
       "6.5.0": "packages/lib/src/components/PayTo/types.ts",
     },
@@ -563,7 +615,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PayU
-  PayU: {
+  payu_IN_cashcard: {
     path: {
       "3.10.0": "src/components/PayU/PayU.tsx",
       "3.14.0": "packages/lib/src/components/PayU/PayU.tsx",
@@ -573,19 +625,8 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
-  // Personal Details (introduced v5.0.0)
-  PersonalDetails: {
-    path: {
-      "5.0.0": "packages/lib/src/components/PersonalDetails/types.ts",
-    },
-    interface: {
-      "5.0.0": "PersonalDetailsProps",
-      "6.0.0": "PersonalDetailsConfiguration",
-    },
-  },
-
   // Pix (introduced v4.0.0)
-  Pix: {
+  pix: {
     path: {
       "4.0.0": "packages/lib/src/components/Pix/types.ts",
     },
@@ -596,7 +637,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Pre-Authorized Debit Canada (introduced ~v6.0.0)
-  PreAuthorizedDebitCanada: {
+  eft_directdebit_CA: {
     path: {
       "6.0.0": "packages/lib/src/components/PreAuthorizedDebitCanada/types.ts",
     },
@@ -606,7 +647,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // PromptPay (introduced ~v5.35.0)
-  PromptPay: {
+  promptpay: {
     path: {
       "5.35.0": "packages/lib/src/components/PromptPay/PromptPay.tsx",
     },
@@ -617,7 +658,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // RatePay
-  RatePay: {
+  ratepay: {
     path: {
       "3.10.0": "src/components/RatePay/RatePay.tsx",
       "3.14.0": "packages/lib/src/components/RatePay/types.ts",
@@ -629,20 +670,8 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
-  // Redirect
-  Redirect: {
-    path: {
-      "3.10.0": "src/components/Redirect/Redirect.tsx",
-      "3.14.0": "packages/lib/src/components/Redirect/Redirect.tsx",
-    },
-    interface: {
-      "3.10.0": "UIElementProps",
-      "6.0.0": "RedirectConfiguration",
-    },
-  },
-
   // Riverty (introduced ~v5.60.0)
-  Riverty: {
+  riverty: {
     path: {
       "5.60.0": "packages/lib/src/components/Riverty/types.ts",
     },
@@ -653,7 +682,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // SEPA Direct Debit
-  Sepa: {
+  sepadirectdebit: {
     path: {
       "3.10.0": "src/components/Sepa/Sepa.tsx",
       "3.14.0": "packages/lib/src/components/Sepa/types.ts",
@@ -666,7 +695,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Swish
-  Swish: {
+  swish: {
     path: {
       "3.10.0": "src/components/Swish/Swish.tsx",
       "3.14.0": "packages/lib/src/components/Swish/Swish.tsx",
@@ -677,20 +706,8 @@ export const components: Record<string, ComponentName> = {
     },
   },
 
-  // 3D Secure 2
-  ThreeDS2: {
-    path: {
-      "3.10.0": "src/components/ThreeDS2/types.ts",
-      "3.14.0": "packages/lib/src/components/ThreeDS2/types.ts",
-    },
-    interface: {
-      "3.10.0": "ThreeDS2DeviceFingerprintProps",
-      "6.0.0": "ThreeDS2Configuration",
-    },
-  },
-
   // Trustly (introduced ~v5.55.0)
-  Trustly: {
+  trustly: {
     path: {
       "5.55.0": "packages/lib/src/components/Trustly/Trustly.tsx",
     },
@@ -701,7 +718,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Twint (introduced v5.0.0)
-  Twint: {
+  twint: {
     path: {
       "5.0.0": "packages/lib/src/components/Twint/Twint.tsx",
     },
@@ -712,7 +729,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // UPI (introduced ~v5.35.0)
-  UPI: {
+  upi: {
     path: {
       "5.35.0": "packages/lib/src/components/UPI/types.ts",
     },
@@ -723,7 +740,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Vipps
-  Vipps: {
+  vipps: {
     path: {
       "3.10.0": "src/components/Vipps/Vipps.tsx",
       "3.14.0": "packages/lib/src/components/Vipps/Vipps.tsx",
@@ -735,7 +752,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Wallet IN (introduced ~v5.35.0)
-  WalletIN: {
+  wallet_IN: {
     path: {
       "5.35.0": "packages/lib/src/components/WalletIN/WalletIN.tsx",
     },
@@ -746,7 +763,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // WeChat Pay
-  WeChat: {
+  wechatpay: {
     path: {
       "3.10.0": "src/components/WeChat/WeChat.tsx",
       "3.14.0": "packages/lib/src/components/WeChat/types.ts",
@@ -759,7 +776,7 @@ export const components: Record<string, ComponentName> = {
   },
 
   // Bancontact (Card variant)
-  Bancontact: {
+  bcmc: {
     path: {
       "3.10.0": "src/components/Card/Bancontact.ts",
       "3.14.0": "packages/lib/src/components/Bancontact/types.ts",

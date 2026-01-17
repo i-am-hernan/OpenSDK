@@ -1,0 +1,97 @@
+{
+  "defaultMode": {
+    "name": "defaultMode",
+    "type": "object",
+    "strictType": "UpiMode",
+    "required": false,
+    "description": ""
+  },
+  "mandate": {
+    "name": "mandate",
+    "type": "object",
+    "strictType": "Mandate",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "amount": {
+        "name": "amount",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": "The transaction amount."
+      },
+      "frequency": {
+        "name": "frequency",
+        "type": "enum",
+        "strictType": "'monthly' | 'weekly' | 'adhoc'",
+        "required": true,
+        "description": "",
+        "values": [
+          "monthly",
+          "weekly",
+          "adhoc"
+        ]
+      },
+      "amountRule": {
+        "name": "amountRule",
+        "type": "enum",
+        "strictType": "'max' | 'exact'",
+        "required": true,
+        "description": "",
+        "values": [
+          "max",
+          "exact"
+        ]
+      }
+    }
+  },
+  "apps": {
+    "name": "apps",
+    "type": "object",
+    "strictType": "Array",
+    "required": false,
+    "description": ""
+  },
+  "url": {
+    "name": "url",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "segmentedControlOptions": {
+    "name": "segmentedControlOptions",
+    "type": "object",
+    "strictType": "Array",
+    "required": false,
+    "description": ""
+  },
+  "paymentData": {
+    "name": "paymentData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "qrCodeData": {
+    "name": "qrCodeData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "brandLogo": {
+    "name": "brandLogo",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "countdownTime": {
+    "name": "countdownTime",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  }
+}

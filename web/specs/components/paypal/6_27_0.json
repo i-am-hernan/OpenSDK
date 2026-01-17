@@ -1,0 +1,268 @@
+{
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "intent": {
+        "name": "intent",
+        "type": "enum",
+        "strictType": "Intent",
+        "required": false,
+        "description": "",
+        "values": [
+          "sale",
+          "capture",
+          "authorize",
+          "order",
+          "tokenize"
+        ]
+      }
+    }
+  },
+  "isExpress": {
+    "name": "isExpress",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "expressPage": {
+    "name": "expressPage",
+    "type": "enum",
+    "strictType": "'cart' | 'minicart' | 'pdp' | 'checkout'",
+    "required": false,
+    "description": "",
+    "values": [
+      "cart",
+      "minicart",
+      "pdp",
+      "checkout"
+    ]
+  },
+  "blockPayPalButton": {
+    "name": "blockPayPalButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "blockPayPalCreditButton": {
+    "name": "blockPayPalCreditButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "blockPayPalPayLaterButton": {
+    "name": "blockPayPalPayLaterButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "blockPayPalVenmoButton": {
+    "name": "blockPayPalVenmoButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "onAuthorized": {
+    "name": "onAuthorized",
+    "type": "function",
+    "strictType": "(\n        data: { authorizedEvent: any; billingAddress?: Partial<AddressData>; deliveryAddress?: Partial<AddressData> },\n        actions: { resolve: () => void; reject: () => void }\n    ) => void",
+    "required": false,
+    "description": ""
+  },
+  "onShippingAddressChange": {
+    "name": "onShippingAddressChange",
+    "type": "function",
+    "strictType": "(data: any, actions: { reject: (reason?: string) => Promise<void> }, component: PaypalElement) => Promise<void>",
+    "required": false,
+    "description": ""
+  },
+  "onShippingOptionsChange": {
+    "name": "onShippingOptionsChange",
+    "type": "function",
+    "strictType": "(data: any, actions: { reject: (reason?: string) => Promise<void> }, component: PaypalElement) => Promise<void>",
+    "required": false,
+    "description": ""
+  },
+  "userAction": {
+    "name": "userAction",
+    "type": "enum",
+    "strictType": "'continue' | 'pay'",
+    "required": false,
+    "description": "",
+    "values": [
+      "continue",
+      "pay"
+    ]
+  },
+  "style": {
+    "name": "style",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "layout": {
+        "name": "layout",
+        "type": "enum",
+        "strictType": "'vertical' | 'horizontal'",
+        "required": false,
+        "description": "",
+        "values": [
+          "vertical",
+          "horizontal"
+        ]
+      },
+      "color": {
+        "name": "color",
+        "type": "enum",
+        "strictType": "'gold' | 'blue' | 'silver' | 'white' | 'black'",
+        "required": false,
+        "description": "",
+        "values": [
+          "gold",
+          "blue",
+          "silver",
+          "white",
+          "black"
+        ]
+      },
+      "shape": {
+        "name": "shape",
+        "type": "enum",
+        "strictType": "'rect' | 'pill'",
+        "required": false,
+        "description": "",
+        "values": [
+          "rect",
+          "pill"
+        ]
+      },
+      "height": {
+        "name": "height",
+        "type": "string",
+        "strictType": "string | number",
+        "required": false,
+        "description": ""
+      },
+      "disableMaxWidth": {
+        "name": "disableMaxWidth",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      },
+      "label": {
+        "name": "label",
+        "type": "enum",
+        "strictType": "'paypal' | 'checkout' | 'buynow' | 'pay'",
+        "required": false,
+        "description": "",
+        "values": [
+          "paypal",
+          "checkout",
+          "buynow",
+          "pay"
+        ]
+      },
+      "tagline": {
+        "name": "tagline",
+        "type": "boolean",
+        "strictType": "boolean",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "onInit": {
+    "name": "onInit",
+    "type": "function",
+    "strictType": "(data?: any, actions?: any) => void",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "() => void",
+    "required": false,
+    "description": ""
+  },
+  "commit": {
+    "name": "commit",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "vault": {
+    "name": "vault",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "locale": {
+    "name": "locale",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's locale. For example, `en-US`."
+  },
+  "intent": {
+    "name": "intent",
+    "type": "enum",
+    "strictType": "Intent",
+    "required": false,
+    "description": "",
+    "values": [
+      "sale",
+      "capture",
+      "authorize",
+      "order",
+      "tokenize"
+    ]
+  },
+  "cspNonce": {
+    "name": "cspNonce",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "enableMessages": {
+    "name": "enableMessages",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "debug": {
+    "name": "debug",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "countryCode": {
+    "name": "countryCode",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's country code."
+  }
+}

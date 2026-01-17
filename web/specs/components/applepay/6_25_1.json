@@ -1,0 +1,262 @@
+{
+  "isExpress": {
+    "name": "isExpress",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "expressPage": {
+    "name": "expressPage",
+    "type": "enum",
+    "strictType": "'cart' | 'minicart' | 'pdp' | 'checkout'",
+    "required": false,
+    "description": "",
+    "values": [
+      "cart",
+      "minicart",
+      "pdp",
+      "checkout"
+    ]
+  },
+  "version": {
+    "name": "version",
+    "type": "number",
+    "strictType": "number",
+    "required": false,
+    "description": ""
+  },
+  "totalPriceLabel": {
+    "name": "totalPriceLabel",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "totalPriceStatus": {
+    "name": "totalPriceStatus",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayLineItemType",
+    "required": false,
+    "description": ""
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "merchantName": {
+        "name": "merchantName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "domainName": {
+    "name": "domainName",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "initiative": {
+    "name": "initiative",
+    "type": "object",
+    "strictType": "Initiative",
+    "required": false,
+    "description": ""
+  },
+  "lineItems": {
+    "name": "lineItems",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayLineItem[]",
+    "required": false,
+    "description": ""
+  },
+  "merchantCapabilities": {
+    "name": "merchantCapabilities",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayMerchantCapability[]",
+    "required": false,
+    "description": ""
+  },
+  "shippingContactEditingMode": {
+    "name": "shippingContactEditingMode",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayShippingContactEditingMode",
+    "required": false,
+    "description": ""
+  },
+  "shippingMethods": {
+    "name": "shippingMethods",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayShippingMethod[]",
+    "required": false,
+    "description": ""
+  },
+  "shippingType": {
+    "name": "shippingType",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayShippingType",
+    "required": false,
+    "description": ""
+  },
+  "supportedCountries": {
+    "name": "supportedCountries",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "supportedNetworks": {
+    "name": "supportedNetworks",
+    "type": "array",
+    "strictType": "string[]",
+    "required": false,
+    "description": ""
+  },
+  "recurringPaymentRequest": {
+    "name": "recurringPaymentRequest",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayRecurringPaymentRequest",
+    "required": false,
+    "description": ""
+  },
+  "requiredBillingContactFields": {
+    "name": "requiredBillingContactFields",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayContactField[]",
+    "required": false,
+    "description": ""
+  },
+  "requiredShippingContactFields": {
+    "name": "requiredShippingContactFields",
+    "type": "array",
+    "strictType": "ApplePayJS.ApplePayContactField[]",
+    "required": false,
+    "description": ""
+  },
+  "billingContact": {
+    "name": "billingContact",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayPaymentContact",
+    "required": false,
+    "description": ""
+  },
+  "shippingContact": {
+    "name": "shippingContact",
+    "type": "object",
+    "strictType": "ApplePayJS.ApplePayPaymentContact",
+    "required": false,
+    "description": ""
+  },
+  "renderApplePayCodeAs": {
+    "name": "renderApplePayCodeAs",
+    "type": "string",
+    "strictType": "ApplePayWebConfiguration['renderApplePayCodeAs']",
+    "required": false,
+    "description": ""
+  },
+  "applicationData": {
+    "name": "applicationData",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "(resolve, reject) => void",
+    "required": false,
+    "description": ""
+  },
+  "onApplePayCodeClose": {
+    "name": "onApplePayCodeClose",
+    "type": "function",
+    "strictType": "ApplePayWebConfiguration['onApplePayCodeClose']",
+    "required": false,
+    "description": ""
+  },
+  "onAuthorized": {
+    "name": "onAuthorized",
+    "type": "function",
+    "strictType": "(\n        data: {\n            authorizedEvent: ApplePayJS.ApplePayPaymentAuthorizedEvent;\n            billingAddress?: Partial<AddressData>;\n            deliveryAddress?: Partial<AddressData>;\n        },\n        actions: { resolve: () => void; reject: (error?: ApplePayJS.ApplePayError) => void }\n    ) => void",
+    "required": false,
+    "description": ""
+  },
+  "onOrderTrackingRequest": {
+    "name": "onOrderTrackingRequest",
+    "type": "function",
+    "strictType": "(resolve: (orderDetails: ApplePayPaymentOrderDetails) => void, reject: () => void) => void",
+    "required": false,
+    "description": ""
+  },
+  "onValidateMerchant": {
+    "name": "onValidateMerchant",
+    "type": "function",
+    "strictType": "(resolve, reject, validationURL: string) => void",
+    "required": false,
+    "description": ""
+  },
+  "onPaymentMethodSelected": {
+    "name": "onPaymentMethodSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayPaymentMethodSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "onShippingContactSelected": {
+    "name": "onShippingContactSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayShippingContactSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "onShippingMethodSelected": {
+    "name": "onShippingMethodSelected",
+    "type": "function",
+    "strictType": "(resolve, reject, event: ApplePayJS.ApplePayShippingMethodSelectedEvent) => void",
+    "required": false,
+    "description": ""
+  },
+  "buttonColor": {
+    "name": "buttonColor",
+    "type": "object",
+    "strictType": "ApplePayButtonStyle",
+    "required": false,
+    "description": ""
+  },
+  "buttonType": {
+    "name": "buttonType",
+    "type": "object",
+    "strictType": "ApplePayButtonType",
+    "required": false,
+    "description": ""
+  },
+  "buttonLocale": {
+    "name": "buttonLocale",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}
