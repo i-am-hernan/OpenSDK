@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ts-node web/src/scripts/updateAllSpecs.ts"
+    "build": "npx ts-node web/src/scripts/updateAllSpecs.ts",
+    "seed": "npx ts-node web/src/scripts/updateAllSpecs.ts",
+    "seed:checkout": "npx ts-node web/src/scripts/updateCheckoutSpecs.ts",
+    "seed:components": "npx ts-node web/src/scripts/updateComponentSpecs.ts"
   },
   "repository": {
     "type": "git",
