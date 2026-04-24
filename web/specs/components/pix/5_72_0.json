@@ -1,0 +1,48 @@
+{
+  "paymentMethod": {
+    "name": "paymentMethod",
+    "type": "object",
+    "strictType": "object",
+    "required": true,
+    "description": "",
+    "additionalProperties": {
+      "type": {
+        "name": "type",
+        "type": "string",
+        "strictType": "'pix'",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "shopperName": {
+    "name": "shopperName",
+    "type": "object",
+    "strictType": "object",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "firstName": {
+        "name": "firstName",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "lastName": {
+        "name": "lastName",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "socialSecurityNumber": {
+    "name": "socialSecurityNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

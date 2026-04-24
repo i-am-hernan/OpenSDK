@@ -1,0 +1,44 @@
+{
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "PreAuthorizedDebitCanadaPlaceholders",
+    "required": false,
+    "description": ""
+  },
+  "showContextualElement": {
+    "name": "showContextualElement",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "enableStoreDetails": {
+    "name": "enableStoreDetails",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "storedPaymentMethodId": {
+    "name": "storedPaymentMethodId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "lastFour": {
+    "name": "lastFour",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "label": {
+    "name": "label",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "paymentData": {
+    "name": "paymentData",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "data": {
+    "name": "data",
+    "type": "object",
+    "strictType": "PayToData",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "email": {
+        "name": "email",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "phone": {
+        "name": "phone",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "abn": {
+        "name": "abn",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "orgid": {
+        "name": "orgid",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "firstName": {
+        "name": "firstName",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "lastName": {
+        "name": "lastName",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "phoneNumber": {
+        "name": "phoneNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "phonePrefix": {
+        "name": "phonePrefix",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "selectedIdentifier": {
+        "name": "selectedIdentifier",
+        "type": "object",
+        "strictType": "PayToIdentifierEnum",
+        "required": true,
+        "description": ""
+      },
+      "bsb": {
+        "name": "bsb",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "bankAccountNumber": {
+        "name": "bankAccountNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "shopperAccountIdentifier": {
+        "name": "shopperAccountIdentifier",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "placeholders": {
+    "name": "placeholders",
+    "type": "object",
+    "strictType": "PayToPlaceholdersType",
+    "required": false,
+    "description": ""
+  },
+  "mandate": {
+    "name": "mandate",
+    "type": "object",
+    "strictType": "MandateType",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "amount": {
+        "name": "amount",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": "The transaction amount."
+      },
+      "amountRule": {
+        "name": "amountRule",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "frequency": {
+        "name": "frequency",
+        "type": "enum",
+        "strictType": "MandateFrequencyType",
+        "required": true,
+        "description": "",
+        "values": [
+          "adhoc",
+          "daily",
+          "weekly",
+          "biWeekly",
+          "monthly",
+          "quarterly",
+          "halfYearly",
+          "yearly"
+        ]
+      },
+      "startsAt": {
+        "name": "startsAt",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "endsAt": {
+        "name": "endsAt",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "remarks": {
+        "name": "remarks",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      },
+      "count": {
+        "name": "count",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "payee": {
+    "name": "payee",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}

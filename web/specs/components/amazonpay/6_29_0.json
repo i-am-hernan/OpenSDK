@@ -1,0 +1,493 @@
+{
+  "addressDetails": {
+    "name": "addressDetails",
+    "type": "object",
+    "strictType": "AddressDetails",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "name": {
+        "name": "name",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "addressLine1": {
+        "name": "addressLine1",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "addressLine2": {
+        "name": "addressLine2",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "addressLine3": {
+        "name": "addressLine3",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "city": {
+        "name": "city",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "districtOrCounty": {
+        "name": "districtOrCounty",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "stateOrRegion": {
+        "name": "stateOrRegion",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "postalCode": {
+        "name": "postalCode",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "countryCode": {
+        "name": "countryCode",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": "The shopper's country code."
+      },
+      "phoneNumber": {
+        "name": "phoneNumber",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "amazonPayToken": {
+    "name": "amazonPayToken",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "amazonCheckoutSessionId": {
+    "name": "amazonCheckoutSessionId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "amount": {
+    "name": "amount",
+    "type": "object",
+    "strictType": "PaymentAmount",
+    "required": false,
+    "description": "The transaction amount.",
+    "additionalProperties": {
+      "value": {
+        "name": "value",
+        "type": "number",
+        "strictType": "number",
+        "required": true,
+        "description": ""
+      },
+      "currency": {
+        "name": "currency",
+        "type": "string",
+        "strictType": "string",
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "buttonColor": {
+    "name": "buttonColor",
+    "type": "enum",
+    "strictType": "ButtonColor",
+    "required": false,
+    "description": "",
+    "values": [
+      "Gold",
+      "LightGray",
+      "DarkGray"
+    ]
+  },
+  "cancelUrl": {
+    "name": "cancelUrl",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "chargePermissionType": {
+    "name": "chargePermissionType",
+    "type": "enum",
+    "strictType": "ChargePermissionType",
+    "required": false,
+    "description": "",
+    "values": [
+      "OneTime",
+      "Recurring"
+    ]
+  },
+  "clientKey": {
+    "name": "clientKey",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The client key used to authenticate requests from your website."
+  },
+  "configuration": {
+    "name": "configuration",
+    "type": "object",
+    "strictType": "AmazonPayBackendConfiguration",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "merchantId": {
+        "name": "merchantId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "publicKeyId": {
+        "name": "publicKeyId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "region": {
+        "name": "region",
+        "type": "enum",
+        "strictType": "Region",
+        "required": false,
+        "description": "",
+        "values": [
+          "EU",
+          "UK",
+          "US"
+        ]
+      },
+      "storeId": {
+        "name": "storeId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "currency": {
+    "name": "currency",
+    "type": "enum",
+    "strictType": "Currency",
+    "required": false,
+    "description": "",
+    "values": [
+      "EUR",
+      "GBP",
+      "USD"
+    ]
+  },
+  "deliverySpecifications": {
+    "name": "deliverySpecifications",
+    "type": "object",
+    "strictType": "DeliverySpecifications",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "specialRestrictions": {
+        "name": "specialRestrictions",
+        "type": "array",
+        "strictType": "string[]",
+        "required": false,
+        "description": ""
+      },
+      "addressRestrictions": {
+        "name": "addressRestrictions",
+        "type": "object",
+        "strictType": "AddressRestrictions",
+        "required": false,
+        "description": "",
+        "additionalProperties": {
+          "type": {
+            "name": "type",
+            "type": "enum",
+            "strictType": "'Allowed' | 'NotAllowed'",
+            "required": false,
+            "description": "",
+            "values": [
+              "Allowed",
+              "NotAllowed"
+            ]
+          },
+          "restrictions": {
+            "name": "restrictions",
+            "type": "object",
+            "strictType": "Restrictions",
+            "required": false,
+            "description": "",
+            "additionalProperties": {}
+          }
+        }
+      }
+    }
+  },
+  "environment": {
+    "name": "environment",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The environment to which the request should be sent."
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The URL to the Adyen Checkout API."
+  },
+  "locale": {
+    "name": "locale",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's locale. For example, `en-US`."
+  },
+  "merchantMetadata": {
+    "name": "merchantMetadata",
+    "type": "object",
+    "strictType": "MerchantMetadata",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "customInformation": {
+        "name": "customInformation",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantReferenceId": {
+        "name": "merchantReferenceId",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "merchantStoreName": {
+        "name": "merchantStoreName",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      },
+      "noteToBuyer": {
+        "name": "noteToBuyer",
+        "type": "string",
+        "strictType": "string",
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "onSubmit": {
+    "name": "onSubmit",
+    "type": "function",
+    "strictType": "void",
+    "required": false,
+    "description": "The function to call when the payment details are submitted."
+  },
+  "payButton": {
+    "name": "payButton",
+    "type": "string",
+    "strictType": "any",
+    "required": false,
+    "description": ""
+  },
+  "placement": {
+    "name": "placement",
+    "type": "enum",
+    "strictType": "Placement",
+    "required": false,
+    "description": "",
+    "values": [
+      "Home",
+      "Product",
+      "Cart",
+      "Checkout",
+      "Other"
+    ]
+  },
+  "productType": {
+    "name": "productType",
+    "type": "enum",
+    "strictType": "ProductType",
+    "required": false,
+    "description": "",
+    "values": [
+      "PayOnly",
+      "PayAndShip"
+    ]
+  },
+  "recurringMetadata": {
+    "name": "recurringMetadata",
+    "type": "object",
+    "strictType": "RecurringMetadata",
+    "required": false,
+    "description": "",
+    "additionalProperties": {
+      "frequency": {
+        "name": "frequency",
+        "type": "object",
+        "strictType": "object",
+        "required": true,
+        "description": "",
+        "additionalProperties": {
+          "unit": {
+            "name": "unit",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": ""
+          },
+          "value": {
+            "name": "value",
+            "type": "enum",
+            "strictType": "FrequencyUnit",
+            "required": true,
+            "description": "",
+            "values": [
+              "Year",
+              "Month",
+              "Week",
+              "Day",
+              "Variable"
+            ]
+          }
+        }
+      },
+      "amount": {
+        "name": "amount",
+        "type": "object",
+        "strictType": "object",
+        "required": true,
+        "description": "The transaction amount.",
+        "additionalProperties": {
+          "amount": {
+            "name": "amount",
+            "type": "string",
+            "strictType": "string",
+            "required": true,
+            "description": "The transaction amount."
+          },
+          "currencyCode": {
+            "name": "currencyCode",
+            "type": "enum",
+            "strictType": "Currency",
+            "required": true,
+            "description": "",
+            "values": [
+              "EUR",
+              "GBP",
+              "USD"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "returnUrl": {
+    "name": "returnUrl",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "showChangePaymentDetailsButton": {
+    "name": "showChangePaymentDetailsButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showOrderButton": {
+    "name": "showOrderButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "showSignOutButton": {
+    "name": "showSignOutButton",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  },
+  "signature": {
+    "name": "signature",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "onClick": {
+    "name": "onClick",
+    "type": "function",
+    "strictType": "(resolve, reject) => Promise<void>",
+    "required": false,
+    "description": ""
+  },
+  "onError": {
+    "name": "onError",
+    "type": "function",
+    "strictType": "(error, component) => void",
+    "required": false,
+    "description": "The function to call when an error occurs."
+  },
+  "onSignOut": {
+    "name": "onSignOut",
+    "type": "function",
+    "strictType": "(resolve, reject) => Promise<void>",
+    "required": false,
+    "description": ""
+  },
+  "expressPage": {
+    "name": "expressPage",
+    "type": "enum",
+    "strictType": "'cart' | 'minicart' | 'pdp' | 'checkout'",
+    "required": false,
+    "description": "",
+    "values": [
+      "cart",
+      "minicart",
+      "pdp",
+      "checkout"
+    ]
+  },
+  "isExpress": {
+    "name": "isExpress",
+    "type": "boolean",
+    "strictType": "boolean",
+    "required": false,
+    "description": ""
+  }
+}
