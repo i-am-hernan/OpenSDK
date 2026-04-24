@@ -3,7 +3,7 @@ import { WEBVERSIONS } from "../constants/versions";
 import { promises as fs } from "fs";
 import * as path from "path";
 
-const updateAllSpecs = async (versions: any, configurations) => {
+export const updateCheckoutSpecs = async (versions: any, configurations) => {
   const specsDir = path.resolve(__dirname, "../../specs/checkout");
 
   // Ensure the specs/checkout directory exists
@@ -22,7 +22,9 @@ const updateAllSpecs = async (versions: any, configurations) => {
   }
 };
 
-updateAllSpecs(WEBVERSIONS, ["checkout"]).catch((err) => {
-  console.error("Error updating all specs:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  updateCheckoutSpecs(WEBVERSIONS, ["checkout"]).catch((err) => {
+    console.error("Error updating all specs:", err);
+    process.exit(1);
+  });
+}

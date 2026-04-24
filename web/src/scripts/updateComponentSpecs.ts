@@ -69,7 +69,7 @@ async function processComponent(
 /**
  * Process all components for specified versions
  */
-async function updateComponentSpecs(
+export async function updateComponentSpecs(
   componentNames?: string[],
   versions?: string[]
 ) {
@@ -115,25 +115,26 @@ async function updateComponentSpecs(
   console.log(`   Failed/Empty: ${totalFailed}`);
 }
 
-// Parse command line arguments
-const args = process.argv.slice(2);
+if (require.main === module) {
+  // Parse command line arguments
+  const args = process.argv.slice(2);
 
-// Check for specific components or versions
-let componentFilter: string[] | undefined;
-let versionFilter: string[] | undefined;
+  // Check for specific components or versions
+  let componentFilter: string[] | undefined;
+  let versionFilter: string[] | undefined;
 
-for (let i = 0; i < args.length; i++) {
-  if (args[i] === "--components" && args[i + 1]) {
-    componentFilter = args[i + 1].split(",");
-    i++;
-  } else if (args[i] === "--versions" && args[i + 1]) {
-    versionFilter = args[i + 1].split(",");
-    i++;
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === "--components" && args[i + 1]) {
+      componentFilter = args[i + 1].split(",");
+      i++;
+    } else if (args[i] === "--versions" && args[i + 1]) {
+      versionFilter = args[i + 1].split(",");
+      i++;
+    }
   }
-}
 
-// Run the script
-updateComponentSpecs(componentFilter, versionFilter).catch((err) => {
-  console.error("Error updating component specs:", err);
-  process.exit(1);
-});
+  updateComponentSpecs(componentFilter, versionFilter).catch((err) => {
+    console.error("Error updating component specs:", err);
+    process.exit(1);
+  });
+}
