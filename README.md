@@ -1,40 +1,97 @@
-# OpenSDK: Adyen Web SDK Specification Parser
+# OpenSDK: Adyen Web SDK Schema Extractor
 
-This project parses the [Adyen Web SDK](https://github.com/Adyen/adyen-web) and generates structured specifications for all supported versions of the SDK. It is designed to help developers and integrators understand, document, and maintain the evolving API surface of Adyen's web integration.
+Extracts structured JSON schemas from the public TypeScript declarations (`.d.ts`) of [`@adyen/adyen-web`](https://github.com/Adyen/adyen-web). The output powers docs, AI-assisted config generation, version diffing, and validation tooling.
 
-## Features
-- Fetches and parses TypeScript types from any version of the Adyen Web SDK
-- Recursively resolves imports and type references
-- Outputs a structured specification for each SDK version
-- Caches results for performance
+## How it works
 
-## Getting Started
+1. Installs `@adyen/adyen-web@<version>` in an isolated temp directory (`/tmp/sdk-extract/`)
+2. Resolves the `.d.ts` entrypoint from the package's `package.json`
+3. Parses declarations with [ts-morph](https://ts-morph.com/)
+4. Builds a normalized schema with `$ref`-style type references
+5. Writes the schema to `schemas/<version>.json`
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v18 or later (v20+ recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+Supports `v6.0.0+` (the version range that ships bundled `.d.ts` files with all types publicly exported).
 
-### Installation
-Clone the repository and install dependencies:
+## Prerequisites
+
+- Node.js v18+ (v20+ recommended)
+- npm
+
+## Setup
 
 ```sh
 npm install
 ```
 
-### Usage
-To parse a specific version of the Adyen Web SDK and generate its specification, run:
+## Usage
+
+Extract the schema for a specific SDK version:
 
 ```sh
-npx ts-node web/src/utils/processSDKTypes.ts
+npx ts-node src/extract.ts 6.34.0
 ```
 
-### Project Structure
-- `web/src/utils/processSDKTypes.ts` — Main script for parsing and generating specifications
-- `web/src/utils/fetchOpenSDK.ts` — Fetches and processes remote SDK type definitions
-- `web/src/utils/processTypes.ts` — Utilities for recursive type processing
+Output: `schemas/6.34.0.json`
 
-## Contributing
-Pull requests and issues are welcome! Please open an issue to discuss your idea or bug before submitting a PR.
+## Schema format
+
+The schema is a dictionary of types keyed by name. Properties use structured type descriptors with `$ref`-style references:
+
+```json
+{
+  "packageName": "@adyen/adyen-web",
+  "version": "6.34.0",
+  "extractedAt": "2026-07-03T06:23:15.542Z",
+  "types": {
+    "CoreConfiguration": {
+      "kind": "interface",
+      "exported": true,
+      "properties": [
+        {
+          "name": "amount",
+          "type": { "kind": "ref", "typeName": "PaymentAmount" },
+          "rawType": "PaymentAmount | undefined",
+          "optional": true,
+          "jsDoc": "Amount of the payment"
+        }
+      ]
+    },
+    "PaymentAmount": {
+      "kind": "interface",
+      "exported": true,
+      "properties": [
+        { "name": "value", "type": { "kind": "primitive", "value": "number" } },
+        { "name": "currency", "type": { "kind": "primitive", "value": "string" } }
+      ]
+    }
+  }
+}
+```
+
+### Type descriptor kinds
+
+| Kind | Description | Example |
+|------|-------------|---------|
+| `primitive` | Built-in types | `{ kind: "primitive", value: "string" }` |
+| `literal` | String/number literals | `{ kind: "literal", value: "test" }` |
+| `ref` | Reference to another type in the schema | `{ kind: "ref", typeName: "PaymentAmount" }` |
+| `array` | Array with element type | `{ kind: "array", elementType: { kind: "primitive", value: "string" } }` |
+| `union` | Union of types | `{ kind: "union", types: [...] }` |
+| `intersection` | Intersection of types | `{ kind: "intersection", types: [...] }` |
+| `function` | Callable with signature | `{ kind: "function", signature: "(state: SubmitData) => void" }` |
+| `object` | Inline anonymous object | `{ kind: "object", properties: [...] }` |
+| `unknown` | Fallback for unclassified types | `{ kind: "unknown", raw: "..." }` |
+
+## Project structure
+
+```
+src/
+  extract.ts          ← Extractor script (install, parse, output)
+schemas/
+  6.34.0.json         ← Extracted schema (one per version)
+web/                  ← Legacy extractor (deprecated, kept for reference)
+```
 
 ## License
+
 [ISC](LICENSE)
