@@ -7,7 +7,9 @@
     "build": "npx ts-node web/src/scripts/updateAllSpecs.ts",
     "seed": "npx ts-node web/src/scripts/updateAllSpecs.ts",
     "seed:checkout": "npx ts-node web/src/scripts/updateCheckoutSpecs.ts",
-    "seed:components": "npx ts-node web/src/scripts/updateComponentSpecs.ts"
+    "seed:components": "npx ts-node web/src/scripts/updateComponentSpecs.ts",
+    "extract": "npx ts-node web-v2/src/extract.ts",
+    "seed:schemas": "npx ts-node web-v2/src/seedSchemas.ts"
   },
   "repository": {
     "type": "git",
