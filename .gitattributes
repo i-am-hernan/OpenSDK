@@ -1,0 +1,9 @@
+# Extracted SDK schemas are build output, not hand-written source.
+#
+# linguist-generated collapses them by default in diffs and pull requests, and
+# keeps them out of the repo's language statistics. Regenerate with:
+#   npm run seed:schemas -- <count>     (web-v2, normalized type graph)
+#   npm run seed:components             (web, legacy flat specs)
+
+web-v2/schemas/*.json linguist-generated=true
+web/specs/**/*.json   linguist-generated=true
