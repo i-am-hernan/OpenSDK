@@ -642,10 +642,10 @@ export function extractVersion(version: string): { types: number } {
 
   fs.mkdirSync(SCHEMA_DIR, { recursive: true });
   const outPath = path.join(SCHEMA_DIR, `${version}.json`);
-  // Compact on purpose. The v4 route serves these bytes verbatim, and
-  // indentation survives gzip — pretty-printed is 1.02MB over the wire against
-  // 0.20MB compact, and 19.3MB on disk against 5.9MB.
-  fs.writeFileSync(outPath, JSON.stringify(schema), "utf-8");
+  // Indented for readability — these get opened and diffed by hand.
+  // Costs ~2x on disk (1.1MB → 2.2MB) and ~70KB on the wire once gzipped
+  // (80KB → 150KB), which the v4 route absorbs since it caches per version.
+  fs.writeFileSync(outPath, JSON.stringify(schema, null, 2), "utf-8");
   console.log(`→ Schema written to ${outPath}`);
 
   // Print summary
