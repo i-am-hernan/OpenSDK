@@ -1,0 +1,30 @@
+{
+  "holderName": {
+    "name": "holderName",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "bankAccountNumber": {
+    "name": "bankAccountNumber",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "bankLocationId": {
+    "name": "bankLocationId",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  },
+  "shopperEmail": {
+    "name": "shopperEmail",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": "The shopper's email address."
+  }
+}

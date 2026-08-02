@@ -1,0 +1,30 @@
+{
+  "type": {
+    "name": "type",
+    "type": "string",
+    "strictType": "string",
+    "required": true,
+    "description": ""
+  },
+  "i18n": {
+    "name": "i18n",
+    "type": "object",
+    "strictType": "Language",
+    "required": true,
+    "description": ""
+  },
+  "loadingContext": {
+    "name": "loadingContext",
+    "type": "string",
+    "strictType": "string",
+    "required": true,
+    "description": "The URL to the Adyen Checkout API."
+  },
+  "reference": {
+    "name": "reference",
+    "type": "string",
+    "strictType": "string",
+    "required": false,
+    "description": ""
+  }
+}
